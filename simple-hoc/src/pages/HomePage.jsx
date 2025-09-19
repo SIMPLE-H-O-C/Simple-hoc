@@ -1,5 +1,5 @@
 import React from "react";
-
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
@@ -40,6 +40,8 @@ const HomePage = () => {
       <section id="contact" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
         <h2>Contact</h2>
       </section>
+
+      <Footer />
     </div>
   );
 };
