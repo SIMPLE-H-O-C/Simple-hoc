@@ -5,8 +5,10 @@ import "../styles/AboutUs.css";
 // import images from assets folder
 import heroImg from "../assets/abouthero.PNG";
 import storyImg from "../assets/ourstory2.jpg";
-import founderImg from "../assets/founder2.jpg";
+import founderImg from "../assets/founder4.png";
 
+// import icons
+import { FiPenTool, FiGlobe, FiUsers } from "react-icons/fi";
 
 const AboutUs = () => {
   return (
@@ -99,19 +101,22 @@ const AboutUs = () => {
           </p>
           <div className="row g-4">
             <div className="col-md-4">
-              <div className="vision-card p-4 h-100">
+              <div className="vision-card p-4 h-100 text-center">
+                <FiPenTool className="vision-icon" />
                 <h5>To simplify creativity.</h5>
               </div>
             </div>
             <div className="col-md-4">
-              <div className="vision-card p-4 h-100">
+              <div className="vision-card p-4 h-100 text-center">
+                <FiGlobe className="vision-icon" />
                 <h5>
                   To unlock opportunities in both the creative and digital world.
                 </h5>
               </div>
             </div>
             <div className="col-md-4">
-              <div className="vision-card p-4 h-100">
+              <div className="vision-card p-4 h-100 text-center">
+                <FiUsers className="vision-icon" />
                 <h5>
                   To make innovation accessible, inspiring, and human.
                 </h5>
