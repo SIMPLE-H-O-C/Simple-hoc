@@ -41,7 +41,7 @@ const nextArrow = (
 
 const Testimonials = () => {
   return (
-    <section className="testimonials-section py-5">
+    <section id="testimonials" className="testimonials-section py-5">
       <div className="container text-center">
         <h2 className="fw-bold mb-5">OUR CLIENTS SAY</h2>
 
