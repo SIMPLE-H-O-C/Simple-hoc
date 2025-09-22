@@ -64,9 +64,44 @@
 
 /* Move arrows further outward */
 .testimonial-carousel .carousel-control-prev {
-  left: -280px !important;
+  left: -60px !important;
 }
 
 .testimonial-carousel .carousel-control-next {
-  right: -280px !important;
+  right: -60px !important;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .testimonial-slide {
+    flex-direction: column; /* stack image & box */
+    gap: 15px;
+  }
+
+  .image-container {
+    width: 250px;
+    height: 320px;
+    border-radius: 50% 50% 0 0;
+    margin: 0 auto;
+  }
+
+  .testimonial-box {
+    transform: none;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+
+  /* bring arrows closer */
+  .testimonial-carousel .carousel-control-prev {
+    left: 10px !important;
+  }
+
+  .testimonial-carousel .carousel-control-next {
+    right: 10px !important;
+  }
 }
