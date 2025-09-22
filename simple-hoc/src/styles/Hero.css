@@ -1,0 +1,141 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background: url("/images/backk2.jpg") center/cover no-repeat fixed;
+  overflow: hidden;
+}
+
+
+
+
+/* dark overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* darker overlay for readability */
+  z-index: 1;
+}
+
+@keyframes streakMove {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(-80px) translateY(-80px);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3; /* make sure content is above overlay & streaks */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+/* ✨ Gradient-shifting highlight */
+.hero-content .highlight {
+  background: linear-gradient(90deg, #d28e01, #ffd700, #ff8c00, #d28e01);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorShift 5s ease infinite;
+}
+
+@keyframes colorShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.hero-content p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* buttons */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-buttons .btn-primary {
+  background: #d28e01;
+  color: #000;
+  border: none;
+}
+
+.hero-buttons .btn-primary:hover {
+  background: #ffb400;
+  transform: translateY(-3px);
+}
+
+.hero-buttons .btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.hero-buttons .btn-outline:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 20px;
+  height: 35px;
+  border: 2px solid #d28e01;
+  border-radius: 25px;
+  position: relative;
+}
+
+.scroll-indicator span::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #d28e01;
+  border-radius: 50%;
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  100% { transform: translate(-50%, 12px); opacity: 0; }
+}
