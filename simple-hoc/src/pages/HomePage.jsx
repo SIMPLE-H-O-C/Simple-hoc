@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
+import ContactUs from "../pages/ContactUs";
 
 const HomePage = () => {
   return (
@@ -28,8 +29,8 @@ const HomePage = () => {
         <h2>Testimonials</h2>
       </section>
 
-      <section id="contact" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
-        <h2>Contact</h2>
+      <section id="contact" style={{ background: "#f8f9fa", padding: "4rem" }}>
+        <ContactUs />
       </section>
     </div>
   );
