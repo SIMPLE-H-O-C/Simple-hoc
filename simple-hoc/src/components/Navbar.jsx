@@ -1,8 +1,8 @@
 // src/components/Navbar.jsx
-import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useState } from "react";
+import logo from "../assets/logo.png";
 import "../styles/Navbar.css";
-import logo from "../assets/logo.png"; 
 
 const Navbar = () => {
   const navItems = [
