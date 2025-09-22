@@ -48,7 +48,7 @@ const TalentSection = () => {
   ];
 
   return (
-    <section style={{ backgroundColor: "#222", color: "white", padding: "60px 0" }}>
+    <section id="talent" style={{ backgroundColor: "#222", color: "white", padding: "60px 0" }}>
       <Container>
         {/* Section Header */}
         <div className="text-center mb-5">
