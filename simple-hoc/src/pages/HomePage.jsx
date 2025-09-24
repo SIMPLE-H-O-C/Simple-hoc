@@ -1,44 +1,48 @@
 import React from "react";
+import AboutUs from "./AboutUs"; // adjust path if it's inside /pages
 
 
 const HomePage = () => {
   return (
     <div>
-     
-      {/* Placeholder sections for smooth scrolling */}
-      <section id="aboutus" style={{ height: "100vh", padding: "4rem" }}>
-        <h2>Navbar</h2>
+      {/* Navbar placeholder section (your teammate will replace this later) */}
+      <section id="navbar" style={{ height: "100vh", padding: "4rem" }}>
+        <h2>Navbar Placeholder</h2>
       </section>
 
-      
-      {/* Placeholder sections for smooth scrolling */}
-      <section id="aboutus" style={{ height: "100vh", padding: "4rem" }}>
+      {/* Home Hero */}
+      <section id="home" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
         <h2>Home</h2>
       </section>
 
-      {/* Placeholder sections for smooth scrolling */}
-      <section id="aboutus" style={{ height: "100vh", padding: "4rem" }}>
-        <h2>About Us</h2>
+      {/* About Us Section*/}
+      <section id="aboutus">
+        <AboutUs />
       </section>
 
-      <section id="services" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
+      {/* Services */}
+      <section id="services" style={{ height: "100vh", padding: "4rem" }}>
         <h2>Services</h2>
       </section>
 
-      <section id="work" style={{ height: "100vh", padding: "4rem" }}>
+      {/* Work */}
+      <section id="work" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
         <h2>Work</h2>
       </section>
 
-      <section id="talent" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
+      {/* Talent */}
+      <section id="talent" style={{ height: "100vh", padding: "4rem" }}>
         <h2>Talent</h2>
       </section>
 
-      <section id="testimonials" style={{ height: "100vh", padding: "4rem" }}>
+      {/* Testimonials */}
+      <section id="testimonials" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
         <h2>Testimonials</h2>
       </section>
 
+     {/* Contact */}
       <section id="contact" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
-        <h2>Contact</h2>
+       <h2>ContactUs</h2> 
       </section>
     </div>
   );
