@@ -5,21 +5,21 @@ import "../styles/Testimonials.css";
 const testimonials = [
   {
     id: 1,
-    image: "https://placehold.co/400x500",
+    image: "/images/testimonial 1.png",
     text: "A great testimonial can boost your brand’s image. Click to edit and add your own.",
     name: "Don Francis",
     role: "Tech Lead",
   },
   {
     id: 2,
-    image: "https://placehold.co/400x500",
+    image: "/images/testimonial 2.png",
     text: "Working with this team has been a fantastic experience!",
     name: "Sarah Johnson",
     role: "Marketing Director",
   },
   {
     id: 3,
-    image: "https://placehold.co/400x500",
+    image: "/images/testimonial 3.png",
     text: "Their attention to detail and professionalism exceeded expectations.",
     name: "Michael Lee",
     role: "Product Manager",
