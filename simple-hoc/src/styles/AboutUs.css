@@ -2,92 +2,49 @@
 
 .aboutus-page {
   font-family: 'Poppins', sans-serif;
-  background-color: #fff; /* white background */
-  color: #333; /* dark text */
+  background-color: #fff;
+  color: #333;
 }
-
-
-/* Hero Section */
-.hero-section {
-  position: relative;
-  height: 90vh;
-  background: url("../assets/founder.jpg") no-repeat center center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  overflow: hidden;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-heading {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.hero-subheading {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #eee;
-}
-
-.hero-subheading span {
-  color: #f39c12; /* orange highlight */
-}
-
 
 /* Section Titles */
 .section-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #111;
-  position: relative;
-}
-.section-title span {
-  color: #f39c12;
-}
-.section-title::after {
-  content: none; /* disabled globally */
+  font-size: 2.2rem;    
+  margin-bottom: 15px;
+  color: #d28e01;       
 }
 
 /* Section Text */
 .section-text {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
   color: #444;
 }
 .section-text strong {
-  color: #f39c12;
+  color: #d28e01;
 }
 
-/* Make images consistent */
-.section-img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 8px;
-}
-
-/* Founder Section */
+/* Reduce overall section spacing */
+.story-section,
+.vision-section,
+.mission-section,
 .founder-section {
-  background-color: #f8f8f8; /* light gray */
+  padding: 3rem 0;   
+}
+
+/* Images with gold glow on hover */
+.section-img {
+  width: 75%;
+  max-width: 250px;
+  border-radius: 8px;
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+}
+
+.section-img.glow-hover:hover {
+  box-shadow: 0 0 25px 5px #d28e01; 
+  transform: scale(1.08);           
 }
 
 /* Vision Section */
@@ -95,39 +52,52 @@
   background-color: #fff;
   text-align: center;
 }
-
 .vision-card {
   border-radius: 12px;
   background: #fff;
-  border: 2px solid #f39c12;
+  border: 2px solid #d28e01;
   transition: transform 0.3s ease, background 0.3s ease;
-  padding: 2rem;
+  padding: 1.5rem;  /* reduced padding */
 }
-
 .vision-card:hover {
-  transform: translateY(-8px);
-  background: #f39c12;
+  transform: translateY(-6px);
+  background: #d28e01;
   color: #fff;
 }
-
 .vision-card:hover .vision-icon {
   color: #fff;
+}
+.vision-icon {
+  font-size: 2rem;
+  color: #d28e01;
+  margin-bottom: 8px;
 }
 
 /* Mission Section */
 .mission-section {
   background-color: #f8f8f8;
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
-
-.mission-section .section-title {
-  text-align: center;
-}
-
 .mission-section .section-text {
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Vision + Mission */
+.vision-mission-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.vision-section,
+.mission-section {
+  flex: 1;
+  padding: 2rem;   
+}
+@media (max-width: 992px) {
+  .vision-mission-wrapper {
+    flex-direction: column;
+  }
 }
