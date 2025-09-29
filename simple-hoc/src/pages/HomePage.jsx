@@ -1,39 +1,33 @@
-import Navbar from "../components/Navbar";
+import ClientTestimonials from "../components/ClientTestimonials";
 import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import TalentSection from "../components/TalentSection";
-import ClientTestimonials from "../components/ClientTestimonials";
-import Work from "../components/Work";
-import Contact from "../components/Contact"; // import contact component
+import AboutUs from "../components/AboutUs";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <div>
       <Navbar />
       <Hero />
-
-      {/* About Us Section */}
-      <section id="aboutus" style={{ minHeight: "100vh", padding: "4rem" }}>
-        <h2>About Us</h2>
-      </section>
+      
+      <AboutUs />
 
       <Services />
 
-      {/* Work Section */}
-      <section id="work" style={{ minHeight: "100vh", padding: "4rem" }}>
-        <Work />
+      <section id="work" style={{ height: "100vh", padding: "4rem" }}>
+        <h2>Work</h2>
       </section>
 
       <TalentSection />
+
       <ClientTestimonials />
 
-      {/* Contact Section */}
-      <section
-        id="contact"
-        style={{ minHeight: "100vh", padding: "4rem", background: "#f8f9fa" }}
-      >
-        <Contact />
+      <section id="contact" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
+        <h2>Contact</h2>
       </section>
     </div>
   );
-}
+};
+
+export default HomePage;
