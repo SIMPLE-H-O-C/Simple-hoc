@@ -3,17 +3,15 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import TalentSection from "../components/TalentSection";
+import AboutUs from "../components/AboutUs";
 
 const HomePage = () => {
   return (
     <div>
       <Navbar />
       <Hero />
-
-      {/* Placeholder sections for smooth scrolling */}
-      <section id="aboutus" style={{ height: "100vh", padding: "4rem" }}>
-        <h2>About Us</h2>
-      </section>
+      
+      <AboutUs />
 
       <Services />
 
