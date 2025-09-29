@@ -1,18 +1,17 @@
-import React from "react";
-import Navbar from "../components/Navbar";
+import ClientTestimonials from "../components/ClientTestimonials";
 import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
 import Services from "../components/Services";
+import TalentSection from "../components/TalentSection";
+import AboutUs from "../components/AboutUs";
 
 const HomePage = () => {
   return (
     <div>
       <Navbar />
       <Hero />
-
-      {/* Placeholder sections for smooth scrolling */}
-      <section id="aboutus" style={{ height: "100vh", padding: "4rem" }}>
-        <h2>About Us</h2>
-      </section>
+      
+      <AboutUs />
 
       <Services />
 
@@ -20,13 +19,9 @@ const HomePage = () => {
         <h2>Work</h2>
       </section>
 
-      <section id="talent" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
-        <h2>Talent</h2>
-      </section>
+      <TalentSection />
 
-      <section id="testimonials" style={{ height: "100vh", padding: "4rem" }}>
-        <h2>Testimonials</h2>
-      </section>
+      <ClientTestimonials />
 
       <section id="contact" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
         <h2>Contact</h2>
