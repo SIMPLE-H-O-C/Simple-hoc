@@ -5,12 +5,12 @@ import "../styles/Talent.css";
 const TalentSection = () => {
   const talents = [
     {
-      role: "Art Director",
-      name: "Ashley Jones",
-      email: "info@mysite.com",
+      role: "Photographer",
+      name: "Tebogo Mametja",
+      email: "bookings@tribeshed.co.za",
       phone: "123-456-7890",
-      img: "/images/talent 1.1.png",
-      hoverImg: "/images/talent 1.2.png",
+      img: "/images/talent1.1.jpeg",
+      hoverImg: "/images/talent1.2.jpeg",
     },
     {
       role: "Tech Lead",
