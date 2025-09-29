@@ -1,0 +1,121 @@
+.testimonials-section {
+  background-color: #f9f9f9;
+  color: #333;
+  position: relative;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #d28e01;
+}
+
+.testimonial-carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonial-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 50%; /* perfect circle */
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.client-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* ensure image is circular */
+}
+
+/* Floating text box on the right */
+.testimonial-box {
+  transform: translateX(-5%);
+  background: #efefef;
+  color: #333;
+  padding: 15px 20px;
+  max-width: 520px;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.quote {
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+.client-name {
+  font-weight: bold;
+  color: #111;
+}
+
+.role {
+  font-weight: normal;
+  color: #666;
+}
+
+/* Move arrows further outward */
+.testimonial-carousel .carousel-control-prev {
+  left: -60px !important;
+}
+
+.testimonial-carousel .carousel-control-next {
+  right: -60px !important;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .testimonial-slide {
+    flex-direction: column; /* stack image & box */
+    gap: 15px;
+  }
+
+  .image-container {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  .testimonial-box {
+    transform: none;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+
+  /* bring arrows closer */
+  .testimonial-carousel .carousel-control-prev {
+    left: 10px !important;
+  }
+
+  .testimonial-carousel .carousel-control-next {
+    right: 10px !important;
+  }
+}
