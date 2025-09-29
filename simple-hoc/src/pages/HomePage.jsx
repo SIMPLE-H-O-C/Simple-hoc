@@ -1,21 +1,19 @@
-import Navbar from "../components/Navbar";
+import ClientTestimonials from "../components/ClientTestimonials";
 import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import TalentSection from "../components/TalentSection";
-import ClientTestimonials from "../components/ClientTestimonials";
+import AboutUs from "../components/AboutUs";
 import Work from "../components/Work";
-import Contact from "../components/Contact"; // import contact component
+import Contact from "../components/Contact";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <div>
       <Navbar />
       <Hero />
 
-      {/* About Us Section */}
-      <section id="aboutus" style={{ minHeight: "100vh", padding: "4rem" }}>
-        <h2>About Us</h2>
-      </section>
+      <AboutUs />
 
       <Services />
 
@@ -25,6 +23,7 @@ export default function HomePage() {
       </section>
 
       <TalentSection />
+
       <ClientTestimonials />
 
       {/* Contact Section */}
@@ -36,4 +35,6 @@ export default function HomePage() {
       </section>
     </div>
   );
-}
+};
+
+export default HomePage;
