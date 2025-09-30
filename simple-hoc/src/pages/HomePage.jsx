@@ -18,22 +18,16 @@ const HomePage = () => {
 
       <Services />
 
-      {/* Work Section */}
-      <section id="work" style={{ minHeight: "100vh", padding: "4rem" }}>
+      
         <Work />
-      </section>
+      
 
       <TalentSection />
 
       <ClientTestimonials />
 
-      {/* Contact Section */}
-      <section
-        id="contact"
-        style={{ minHeight: "100vh", padding: "4rem", background: "#f8f9fa" }}
-      >
         <Contact />
-      </section>
+    
 
        <ScrollToTop />
     </div>
