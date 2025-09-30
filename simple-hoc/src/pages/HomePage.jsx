@@ -7,6 +7,7 @@ import AboutUs from "../components/AboutUs";
 import Work from "../components/Work";
 import Contact from "../components/Contact";
 
+
 const HomePage = () => {
   return (
     <div>
@@ -33,7 +34,10 @@ const HomePage = () => {
       >
         <Contact />
       </section>
+
+       <ScrollToTop />
     </div>
+    
   );
 };
 
