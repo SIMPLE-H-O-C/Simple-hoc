@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
-    <div id="aboutus" className="aboutus-page">
+    <div className="aboutus-page">
 
       {/* Our Story */}
       <motion.section

@@ -4,35 +4,28 @@ import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import TalentSection from "../components/TalentSection";
 import AboutUs from "../components/AboutUs";
-import Work from "../components/Work";
-import Contact from "../components/Contact";
-
+import ScrollToTop from "../components/ScrollToTop";
 
 const HomePage = () => {
   return (
     <div>
       <Navbar />
       <Hero />
-
+      
       <AboutUs />
 
       <Services />
 
-      {/* Work Section */}
-      <section id="work" style={{ minHeight: "100vh", padding: "4rem" }}>
-        <Work />
+      <section id="work" style={{ height: "100vh", padding: "4rem" }}>
+        <h2>Work</h2>
       </section>
 
       <TalentSection />
 
       <ClientTestimonials />
 
-      {/* Contact Section */}
-      <section
-        id="contact"
-        style={{ minHeight: "100vh", padding: "4rem", background: "#f8f9fa" }}
-      >
-        <Contact />
+      <section id="contact" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
+        <h2>Contact</h2>
       </section>
 
        <ScrollToTop />
