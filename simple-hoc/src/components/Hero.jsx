@@ -20,14 +20,9 @@ const Hero = () => {
   }}
 />
 
-
-
         <div className="hero-buttons">
-          <a href="#portfolio" className="btn btn-outline">
-            View Work
-          </a>
-          <a href="#contact" className="btn btn-outline">
-            Get In Touch
+          <a href="#work" className="btn btn-outline">
+            View Our Work
           </a>
         </div>
       </div>
