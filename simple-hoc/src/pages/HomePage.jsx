@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import TalentSection from "../components/TalentSection";
 import AboutUs from "../components/AboutUs";
+import ScrollToTop from "../components/ScrollToTop";
 
 const HomePage = () => {
   return (
@@ -26,7 +27,10 @@ const HomePage = () => {
       <section id="contact" style={{ height: "100vh", padding: "4rem", background: "#f8f9fa" }}>
         <h2>Contact</h2>
       </section>
+
+       <ScrollToTop />
     </div>
+    
   );
 };
 
