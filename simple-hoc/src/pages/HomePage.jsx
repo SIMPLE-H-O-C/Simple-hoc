@@ -6,6 +6,8 @@ import TalentSection from "../components/TalentSection";
 import AboutUs from "../components/AboutUs";
 import Work from "../components/Work";
 import Contact from "../components/Contact";
+import ScrollToTop from "../components/ScrollToTop";
+import Footer from "../components/Footer"
 
 
 const HomePage = () => {
@@ -30,6 +32,8 @@ const HomePage = () => {
     
 
        <ScrollToTop />
+
+       <Footer />
     </div>
     
   );
