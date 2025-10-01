@@ -3,29 +3,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/AboutUs.css";
 
 // import images
-import storyImg from "../assets/ourstory44.png";
-import founderImg from "../assets/boss1.png";
+import storyImg from "/images/about/aboutus3.jpg";
+import founderImg from "/images/about/boss1.png";
 
 // icons
 import { FiPenTool, FiGlobe, FiUsers } from "react-icons/fi";
 import { motion } from "framer-motion";
 
-// team images (replace with your actual image paths)
-import member1 from "../assets/boss1.png";
-import member2 from "../assets/founder2.jpg";
-import member3 from "../assets/founder.jpg";
-import member4 from "../assets/Sharleen.jpg";
-import member5 from "../assets/ourstory2.jpg";
-import member6 from "../assets/our story3.jpg";
 
 const teamMembers = [
-  { name: "Mpho Ngoepe", role: "CEO / Founder", img: member1 },
-  { name: "Hope", role: "Business Administrator", img: member2 },
-  { name: "Mpho Itumeleng", role: "Software Developer", img: member3 },
-  { name: "Sharleen Shabangu", role: "Software Developer", img: member4 },
-  { name: "Pelma Mahlobogoane", role: "Software Developer", img: member5 },
-  { name: "Isabella Monyeseala", role: "Software Developer", img: member6 },
+  { name: "Mpho Ngoepe", role: "CEO / Founder", img: "/images/about/boss1.png" },
+  { name: "Hope", role: "Business Administrator", img: "/images/about/founder4.png" },
+  { name: "Mpho Itumeleng", role: "Software Developer", img: "/images/about/founder.jpg" },
+  { name: "Sharleen Shabangu", role: "Software Developer", img: "/images/about/sharleen.jpg" },
+  { name: "Pelma Mahlobogoane", role: "Software Developer", img: "/images/about/ourstory2.jpg" },
+  { name: "Isabella Monyeseala", role: "Software Developer", img: "/images/about/our story3.jpg" },
 ];
+
 
 const AboutUs = () => {
   return (
