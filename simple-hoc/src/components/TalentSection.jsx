@@ -1,3 +1,4 @@
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import "../styles/Talent.css";
@@ -8,9 +9,13 @@ const TalentSection = () => {
       role: "Photographer",
       name: "Tebogo Mametja",
       email: "bookings@tribeshed.co.za",
-      phone: "123-456-7890",
       img: "/images/talent/talent1.1.jpeg",
       hoverImg: "/images/talent/talent1.2.jpeg",
+      socials: {
+        facebook: "https://www.facebook.com/Tebz06?mibextid=LQQJ4d",
+        instagram: "https://www.instagram.com/tebomametja/",
+        twitter: "https://x.com/tebomametja",
+      },
     },
     // {
     //   role: "Tech Lead",
@@ -71,7 +76,7 @@ const TalentSection = () => {
         </div>
 
         {/* Talent Grid */}
-        <Row>
+        <Row className="justify-content-center">
           {talents.map((talent, index) => (
             <Col md={6} className="mb-4" key={index}>
               <Card className="h-100 border-0 talent-card">
@@ -98,19 +103,39 @@ const TalentSection = () => {
                       <p className="talent-role">{talent.role}</p>
                       <h5 className="talent-name">{talent.name}</h5>
                       <p className="talent-contact">{talent.email}</p>
-                      <p className="talent-contact">{talent.phone}</p>
 
                       {/* Socials */}
                       <div className="mt-3">
-                        <a href="#" className="me-3 social-link">
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" className="me-3 social-link">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" className="social-link">
-                          <i className="fab fa-linkedin-in"></i>
-                        </a>
+                        {talent.socials.facebook && (
+                          <a
+                            href={talent.socials.facebook}
+                            className="me-3 social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className="fab fa-facebook-f"></i>
+                          </a>
+                        )}
+                        {talent.socials.twitter && (
+                          <a
+                            href={talent.socials.twitter}
+                            className="me-3 social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className="fab fa-x-twitter"></i>
+                          </a>
+                        )}
+                        {talent.socials.instagram && (
+                          <a
+                            href={talent.socials.instagram}
+                            className="social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className="fab fa-instagram"></i>
+                          </a>
+                        )}
                       </div>
                     </Card.Body>
                   </Col>
