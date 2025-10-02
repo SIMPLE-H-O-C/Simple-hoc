@@ -103,7 +103,12 @@
 }
 
 .talent-card:hover .social-link {
-  color: #fff;
+  color: #d28e01;
+}
+
+/* Centers the only card inside the row */
+#talent .row.justify-content-center {
+  justify-content: center;
 }
 
 /* Ensure side-by-side layout on md+ */
