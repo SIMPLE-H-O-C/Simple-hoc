@@ -6,22 +6,25 @@
   align-items: center;
   text-align: center;
   color: #fff;
-  background: url("/images/backk2.jpg") center/cover no-repeat fixed;
+  background: url("/images/pelm.jpg") center/cover no-repeat fixed;
   overflow: hidden;
 }
 
 
-
-
-/* dark overlay */
 .hero-section::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* darker overlay for readability */
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4); 
   z-index: 1;
 }
+
+.hero-section * {
+  position: relative;
+  z-index: 2; 
+}
+
+
 
 @keyframes streakMove {
   from {
@@ -34,7 +37,7 @@
 
 .hero-content {
   position: relative;
-  z-index: 3; /* make sure content is above overlay & streaks */
+  z-index: 3; 
   max-width: 900px;
   margin: 0 auto;
 }
@@ -44,7 +47,7 @@
   font-weight: 800;
   line-height: 1.2;
 }
-/* ✨ Gradient-shifting highlight */
+
 .hero-content .highlight {
   background: linear-gradient(90deg, #d28e01, #ffd700, #ff8c00, #d28e01);
   background-size: 300% 300%;
@@ -66,7 +69,7 @@
   color: #ddd;
 }
 
-/* buttons */
+
 .hero-buttons {
   margin-top: 30px;
   display: flex;
@@ -105,7 +108,7 @@
   transform: translateY(-3px);
 }
 
-/* scroll indicator */
+
 .scroll-indicator {
   position: absolute;
   bottom: 20px;
@@ -138,4 +141,48 @@
 @keyframes scroll {
   0% { transform: translate(-50%, 0); opacity: 1; }
   100% { transform: translate(-50%, 12px); opacity: 0; }
+}
+
+
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem; }
+
+
+.hero-section {
+  text-align: center;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+}
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 0;
+  margin: 0 auto;
+  position: relative;
+  width: 302px; 
+  height: 302px;
+  z-index: 3;
+}
+
+.grid-tile {
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.logo-slice {
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+  transform: scale(1);
 }
