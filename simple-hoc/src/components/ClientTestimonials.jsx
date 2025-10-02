@@ -5,23 +5,23 @@ import "../styles/Testimonials.css";
 const testimonials = [
   {
     id: 1,
-    image: "/images/testimonial 1.png",
+    image: "/images/testimonials/xiaomi.webp",
     text: "A great testimonial can boost your brand’s image. Click to edit and add your own.",
-    name: "Don Francis",
+    name: "Xiaomi",
     role: "Tech Lead",
   },
   {
     id: 2,
-    image: "/images/testimonial 2.png",
+    image: "/images/testimonials/supersport.webp",
     text: "Working with this team has been a fantastic experience!",
-    name: "Sarah Johnson",
+    name: "SuperSport",
     role: "Marketing Director",
   },
   {
     id: 3,
-    image: "/images/testimonial 3.png",
+    image: "/images/testimonials/bar-one.png",
     text: "Their attention to detail and professionalism exceeded expectations.",
-    name: "Michael Lee",
+    name: "Bar-One",
     role: "Product Manager",
   },
 ];
