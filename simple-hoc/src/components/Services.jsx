@@ -16,8 +16,8 @@ const services = [
   },
   {
     icon: <Share2 size={40} />,
-    title: "Social Media Marketing",
-    desc: "We create consistent, engaging content and manage data-driven campaigns to grow your online presence."
+    title: "Digital Solutions",
+    desc: "We offer future-ready digital opportunities and solutions including app development, digital campaigns and custom software to simplify creativity and connect people globally. "
   },
   {
     icon: <Users size={40} />,

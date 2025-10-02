@@ -6,6 +6,9 @@ import TalentSection from "../components/TalentSection";
 import AboutUs from "../components/AboutUs";
 import Work from "../components/Work";
 import Contact from "../components/Contact";
+import ScrollToTop from "../components/ScrollToTop";
+import Footer from "../components/Footer"
+
 
 const HomePage = () => {
   return (
@@ -17,23 +20,22 @@ const HomePage = () => {
 
       <Services />
 
-      {/* Work Section */}
-      <section id="work" style={{ minHeight: "100vh", padding: "4rem" }}>
+      
         <Work />
-      </section>
+      
 
       <TalentSection />
 
       <ClientTestimonials />
 
-      {/* Contact Section */}
-      <section
-        id="contact"
-        style={{ minHeight: "100vh", padding: "4rem", background: "#f8f9fa" }}
-      >
         <Contact />
-      </section>
+    
+
+       <ScrollToTop />
+
+       <Footer />
     </div>
+    
   );
 };
 

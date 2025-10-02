@@ -3,6 +3,14 @@
   transition: background 0.3s ease-in-out;
 }
 
+.custom-navbar {
+  position: sticky;
+  top: -80px; 
+  transition: top 0.4s ease-in-out;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
 
 
 
