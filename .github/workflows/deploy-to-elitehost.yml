@@ -17,9 +17,11 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
+        working-directory: ./simple-hoc
         run: npm ci
 
       - name: Build production
+        working-directory: ./simple-hoc
         run: npm run build
 
       - name: Upload dist via FTP/SFTP
@@ -30,5 +32,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          local-dir: ./dist
+          local-dir: ./simple-hoc/dist
           server-dir: ${{ secrets.FTP_REMOTE_PATH }}
