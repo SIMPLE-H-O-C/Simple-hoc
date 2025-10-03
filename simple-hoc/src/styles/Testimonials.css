@@ -1,0 +1,61 @@
+.testimonials-section {
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #d28e01;
+}
+
+.testimonial-block {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.quote-icon {
+  color: #c07a00;
+  opacity: 0.2;
+}
+
+.testimonial-text {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.client-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.client-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.client-role {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* clients section */
+
+.clients-logos {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 4rem; /* adds space between carousel and logos */
+}
+
+.client-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+}
