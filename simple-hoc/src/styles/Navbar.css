@@ -1,0 +1,77 @@
+.custom-navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); 
+  transition: background 0.3s ease-in-out;
+}
+
+.custom-navbar {
+  position: sticky;
+  top: -80px; 
+  transition: top 0.4s ease-in-out;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+
+
+.navbar-brand:hover {
+  color: #d28e01;
+}
+
+
+.brand-highlight {
+  color: #d28e01;
+}
+
+
+.nav-link {
+  position: relative;
+  margin: 0 8px;
+  font-weight: 500;
+  color: #000; 
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d28e01; 
+}
+
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #d28e01;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+.active-link {
+  color: #d28e01 !important;
+  font-weight: bold;
+}
+
+.active-link::after {
+  width: 100%;
+}
+
+
+.navbar-logo {
+  height: 60px; 
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  margin-top: -5px; 
+}
+
+
+.navbar {
+  min-height: 56px;
+}

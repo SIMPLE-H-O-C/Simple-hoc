@@ -1,0 +1,146 @@
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+}
+
+/* LEFT SIDE (Details + Socials) */
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+  margin-top: 50px;
+}
+
+.contact-left p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.contact-info svg {
+  color: #d28e01;
+  font-size: 1.2rem;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #1a1a1a;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #d28e01;
+  transform: scale(1.1);
+}
+
+/* FORM (Right Side) */
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Form container */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Form group with label on border */
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.form-group label {
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  background: white;
+  padding: 0 6px;
+  font-size: 0.9rem;
+  font-weight: 250;
+  color: #000000;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background: transparent;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #d28e01;
+}
+
+/* Button */
+.contact-form button {
+  padding: 14px 28px;
+  background: white;
+  color: #d28e01;
+  border: 2px solid #d28e01;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 150px;
+}
+
+.contact-form button:hover {
+  background: #d28e01;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .contact-right {
+    width: 100%;
+  }
+}
