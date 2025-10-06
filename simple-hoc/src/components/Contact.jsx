@@ -27,6 +27,7 @@ export default function Contact() {
     <div className="contact-section">
       {/* LEFT SIDE */}
       <div className="contact-left">
+        <h2 className="fw-bold mb-5">GET IN TOUCH</h2>
         <p>
           Reach out to us using the contact details below or fill out the form,
           and we'll get back to you!
