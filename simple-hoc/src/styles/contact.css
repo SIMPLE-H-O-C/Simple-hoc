@@ -19,6 +19,13 @@
   margin-top: 50px;
 }
 
+.contact-left h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #d28e01;
+}
+
 .contact-left p {
   margin-bottom: 25px;
   line-height: 1.6;
