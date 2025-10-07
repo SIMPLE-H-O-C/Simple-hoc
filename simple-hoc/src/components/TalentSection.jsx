@@ -6,7 +6,7 @@ import "../styles/Talent.css";
 const TalentSection = () => {
   const talents = [
     {
-      role: "Photographer",
+      role: "Photographer • Videographer • Director",
       name: "Tebogo Mametja",
       email: "bookings@tribeshed.co.za",
       img: "/images/talent/talent1.1.jpeg",
