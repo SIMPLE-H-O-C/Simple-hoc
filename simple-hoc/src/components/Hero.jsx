@@ -6,7 +6,25 @@ const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="hero-content">
-        <motion.img
+      
+        <div className="hero-left">
+          <motion.img
+            src="/logo.png"
+            alt="Logo"
+            animate={{
+              y: [0, -10, 0],
+              scale: [1, 1.05, 1],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="hero-logo"
+          />
+        </div>
+
+       
         <div className="hero-right">
           <h1 className="hero-title">
             SI<span className="highlight-mp">MP</span>LE.
@@ -20,6 +38,11 @@ const Hero = () => {
             </p>
           </div>
 
+          <div className="hero-buttons">
+            <a href="#work" className="btn btn-outline">
+              View Our Work
+            </a>
+          </div>
         </div>
       </div>
 
