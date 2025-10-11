@@ -4,6 +4,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useEffect, useState, useRef } from "react";
 import "../styles/Navbar.css";
 import logo from "../assets/log.png";
+import Collapse from "bootstrap/js/dist/collapse";
+
 
 const Navbar = () => {
   const navItems = [
@@ -44,7 +46,7 @@ const Navbar = () => {
       });
 
       const navbarCollapse = document.getElementById("navbarNav");
-      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      const bsCollapse = Collapse.getInstance(navbarCollapse);
       if (bsCollapse && navbarCollapse.classList.contains("show")) {
         bsCollapse.hide();
       }
