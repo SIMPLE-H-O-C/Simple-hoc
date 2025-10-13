@@ -5,26 +5,24 @@ import "../styles/AboutUs.css";
 import storyImg from "/images/about/aboutus3.jpg";
 import founderImg from "/images/about/boss1.png";
 
+
 // icons
 import { motion } from "framer-motion";
 import { FiGlobe, FiPenTool, FiUsers } from "react-icons/fi";
 
-
 const teamMembers = [
-  { name: "Mpho Ngoepe", role: "CEO / Founder", img: "/images/about/boss1.png" },
-  { name: "Hope", role: "Business Administrator", img: "/images/about/founder4.png" },
-  { name: "Mpho Itumeleng", role: "Software Developer", img: "/images/about/founder.jpg" },
-  { name: "Sharleen Shabangu", role: "Software Developer", img: "/images/about/sharleen.jpg" },
-  { name: "Pelma Mahlobogoane", role: "Software Developer", img: "/images/about/ourstory2.jpg" },
-  { name: "Isabella Monyeseala", role: "Software Developer", img: "/images/about/our story3.jpg" },
+  { name: "Mpho Ngoepe", role: "CEO / Founder", img: "/images/about/boss11.png" },
+  { name: "Murangi Nemaungani", role: "Business Administrator", img: "/images/about/Hope.png" },
+  { name: "Mpho Itumeleng", role: "Software Developer", img: "/images/about/Mpho.png" },
+  { name: "Sharleen Shabangu", role: "Software Developer", img: "/images/about/sharleen.png" },
+  { name: "Pelma Mahlobogoane", role: "Software Developer", img: "/images/about/Pelma.jpg" },
+  { name: "Isabella Monyeseala", role: "Software Developer", img: "/images/about/Isa.png" },
 ];
-
 
 const AboutUs = () => {
   return (
     <div id="aboutus" className="aboutus-page">
-
-      {/* Our Story */}
+     {/* Our Story */}
       <motion.section
         className="story-section py-5"
         initial={{ opacity: 0, y: 50 }}
@@ -77,10 +75,11 @@ const AboutUs = () => {
       >
         <div className="container">
           <div className="row">
-            
             {/* Vision Section */}
             <div className="col-lg-6 col-md-12 vision-section">
-              <h2 className="section-title">Our <span>Vision</span></h2>
+              <h2 className="section-title">
+                Our <span>Vision</span>
+              </h2>
               <p className="section-text mb-4">
                 To be the leading creative house where artistry meets technology
                 innovation, shaping culture and inspiring transformation in the
@@ -88,9 +87,18 @@ const AboutUs = () => {
               </p>
               <div className="row g-3">
                 {[
-                  { icon: <FiPenTool className="vision-icon" />, text: "To simplify creativity." },
-                  { icon: <FiGlobe className="vision-icon" />, text: "To unlock opportunities in both the creative and digital world." },
-                  { icon: <FiUsers className="vision-icon" />, text: "To make innovation accessible, inspiring, and human." }
+                  {
+                    icon: <FiPenTool className="vision-icon" />,
+                    text: "To simplify creativity.",
+                  },
+                  {
+                    icon: <FiGlobe className="vision-icon" />,
+                    text: "To unlock opportunities in both the creative and digital world.",
+                  },
+                  {
+                    icon: <FiUsers className="vision-icon" />,
+                    text: "To make innovation accessible, inspiring, and human.",
+                  },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -111,17 +119,20 @@ const AboutUs = () => {
 
             {/* Mission Section */}
             <div className="col-lg-6 col-md-12 mission-section">
-              <h2 className="section-title">Our <span>Mission</span></h2>
+              <h2 className="section-title">
+                Our <span>Mission</span>
+              </h2>
               <p className="section-text mb-4">
-                To empower visionaries and brands by simplifying creativity and delivering innovative,
-                human-centered solutions that blend artistry with technology to build a lasting legacy.
+                To empower visionaries and brands by simplifying creativity and
+                delivering innovative, human-centered solutions that blend
+                artistry with technology to build a lasting legacy.
               </p>
 
               <div className="row g-3">
                 {[
                   { number: "120+", label: "Happy Clients" },
                   { number: "250+", label: "Projects Completed" },
-                  { number: "10+", label: "Creative Partners" }
+                  { number: "10+", label: "Creative Partners" },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -139,12 +150,11 @@ const AboutUs = () => {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </motion.section>
 
-{/* Our Founder */}
+     {/* Our Founder */}
 <motion.section
   className="founder-section py-5"
   initial={{ opacity: 0, y: 50 }}
@@ -191,44 +201,45 @@ const AboutUs = () => {
   </div>
 </motion.section>
 
-
-
       {/* Meet Our Team */}
- <motion.section
-      className="team-section py-5"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
-      <div className="container text-center">
-        <h2 className="section-title">Meet the <span>Team</span></h2>
-        <div className="row g-4 justify-content-center mt-4">
-          {teamMembers.map((member, idx) => (
-            <motion.div
-              key={idx}
-              className="col-6 col-md-4 col-lg-3"
-              initial={{ opacity: 0, scale: 0.8, y: 50 }}
-              whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: idx * 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="team-card text-center">
-                <div className="team-img-wrapper">
-                  <img src={member.img} alt={member.name} className="team-img" />
+      <motion.section
+        className="team-section py-5"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="container text-center">
+          <h2 className="section-title">
+            Meet the <span>Team</span>
+          </h2>
+          <div className="row g-4 justify-content-center mt-4">
+            {teamMembers.map((member, idx) => (
+              <motion.div
+                key={idx}
+                className="col-6 col-md-4 col-lg-3"
+                initial={{ opacity: 0, scale: 0.8, y: 50 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="team-card text-center">
+                  <div className="team-img-wrapper">
+                    <img
+                      src={member.img}
+                      alt={member.name}
+                      className="team-img"
+                    />
+                  </div>
+                  <h5 className="team-name">{member.name}</h5>
+                  <p className="team-role">{member.role}</p>
                 </div>
-                <h5 className="team-name">{member.name}</h5>
-                <p className="team-role">{member.role}</p>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
-      
-    </motion.section>
-
+      </motion.section>
     </div>
-
   );
 };
 

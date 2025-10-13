@@ -8,7 +8,7 @@
 
 /* Section Titles */
 .section-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   margin-bottom: 15px;
   color: #d28e01;
@@ -25,7 +25,7 @@
   color: #d28e01;
 }
 
-/* Keep consistent section spacing */
+/* Consistent section spacing */
 .story-section,
 .vision-section,
 .mission-section,
@@ -33,17 +33,16 @@
   padding: 3rem 0;
 }
 
-/* Ensure the two columns center their inner content */
+/* Center and constrain text columns */
 .story-section .col-md-6,
 .founder-section .col-md-6 {
   text-align: center;
-  /* Flex helpers are added in JSX via Bootstrap classes (d-flex etc.) */
 }
 
-/* Constrain text width in columns for readability */
 .story-text-wrapper,
 .founder-text-wrapper {
   max-width: 560px;
+  margin: 0 auto;
 }
 
 /* Images with gold glow on hover */
@@ -55,8 +54,6 @@
   display: inline-block;
 }
 .section-img.glow-hover:hover {
-  box-shadow: 0 0 25px 5px #d28e01;
-  transform: scale(1.08);
   box-shadow: 0 0 25px 5px #d28e01;
   transform: scale(1.08);
 }
@@ -81,7 +78,6 @@
   padding: 1.5rem;
   width: 60%;
   margin: 0.5rem auto;
-  padding: 1rem;
 }
 
 .vision-card h5 {
@@ -98,6 +94,7 @@
 .vision-card:hover .vision-icon {
   color: #fff;
 }
+
 .vision-icon {
   font-size: 2rem;
   font-weight: 700;
@@ -107,7 +104,16 @@
 
 /* Mission Section */
 .mission-section {
+  background-color: #fff;
+  padding: 3rem 0;
   padding-left: 2rem;
+}
+
+.mission-section .section-text {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 .mission-card {
@@ -139,6 +145,36 @@
   margin-bottom: 8px;
 }
 
+.mission-card:hover .mission-number {
+  color: #fff;
+}
+
+/* Team Section */
+.team-section {
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.team-section .section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  color: #d28e01;
+  margin-bottom: 2rem;
+}
+
+.team-card {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.team-img-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
 .team-img {
   width: 100%;
   height: 100%;
@@ -162,26 +198,7 @@
   color: #777;
 }
 
-
-/* Mobile tweaks: stack columns (Bootstrap already does this) and make images larger */
-@media (max-width: 767.98px) {
-  .section-img {
-    width: 90%;
-    max-width: 420px;
-    margin-top: 0.75rem;
-  }
-  .section-title {
-    font-size: 1.9rem;
-  }
-
-.mission-card:hover .mission-number {
-  color: #fff;
-}
-}
-
-
-
-/* Responsive */
+/* Responsive Adjustments */
 @media (max-width: 992px) {
   .vision-section {
     border-right: none;
@@ -192,5 +209,16 @@
   }
   .mission-section {
     padding-left: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-img {
+    width: 90%;
+    max-width: 420px;
+    margin-top: 0.75rem;
+  }
+  .section-title {
+    font-size: 1.9rem;
   }
 }
