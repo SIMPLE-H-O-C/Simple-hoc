@@ -1,7 +1,6 @@
 .testimonials-section {
-  background-color: #f9f9f9;
+  background-color: #fff;
   color: #333;
-  position: relative;
   text-align: center;
 }
 
@@ -12,110 +11,51 @@
   color: #d28e01;
 }
 
-.testimonial-carousel {
-  max-width: 1000px;
+.testimonial-block {
+  max-width: 700px;
   margin: 0 auto;
 }
 
-.testimonial-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.quote-icon {
+  color: #c07a00;
+  opacity: 0.2;
 }
 
-.image-container {
-  position: relative;
-  width: 320px;
-  height: 320px;
-  overflow: hidden;
-  border-radius: 50%; /* perfect circle */
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.testimonial-text {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #333;
 }
 
 .client-img {
-  width: 100%;
-  height: 100%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 50%; /* ensure image is circular */
-}
-
-/* Floating text box on the right */
-.testimonial-box {
-  transform: translateX(-5%);
-  background: #efefef;
-  color: #333;
-  padding: 15px 20px;
-  max-width: 520px;
-  text-align: left;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-}
-
-.quote {
-  font-size: 1.05rem;
-  font-style: italic;
-}
-
-.separator {
-  border: none;
-  height: 1px;
-  background: #ddd;
-  margin: 10px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .client-name {
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1.1rem;
   color: #111;
 }
 
-.role {
-  font-weight: normal;
+.client-role {
+  font-size: 0.9rem;
   color: #666;
 }
 
-/* Move arrows further outward */
-.testimonial-carousel .carousel-control-prev {
-  left: -60px !important;
+/* clients section */
+
+.clients-logos {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 4rem; /* adds space between carousel and logos */
 }
 
-.testimonial-carousel .carousel-control-next {
-  right: -60px !important;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .testimonial-slide {
-    flex-direction: column; /* stack image & box */
-    gap: 15px;
-  }
-
-  .image-container {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    margin: 0 auto;
-  }
-
-  .testimonial-box {
-    transform: none;
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .quote {
-    font-size: 1rem;
-  }
-
-  /* bring arrows closer */
-  .testimonial-carousel .carousel-control-prev {
-    left: 10px !important;
-  }
-
-  .testimonial-carousel .carousel-control-next {
-    right: 10px !important;
-  }
+.client-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
 }
