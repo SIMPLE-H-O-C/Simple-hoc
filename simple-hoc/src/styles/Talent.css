@@ -1,6 +1,6 @@
 /* Section Styling */
 .talent-section {
-  background-color: #f8f9fa;
+  background-color: #fff;
   color: #333;
   padding: 60px 0;
 }
@@ -114,7 +114,7 @@
 /* Ensure side-by-side layout on md+ */
 @media (min-width: 768px) {
   .talent-card .talent-card-row {
-    flex-wrap: nowrap; /* keep image + info side by side */
+    flex-wrap: nowrap;
     align-items: stretch;
   }
 
@@ -126,7 +126,7 @@
 
   .talent-card .talent-info {
     display: flex;
-    align-items: center; /* center info vertically */
+    align-items: center;
     padding: 1.5rem;
   }
 }
