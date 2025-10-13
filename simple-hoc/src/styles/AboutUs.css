@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap");
 
 .aboutus-page {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #fff;
   color: #333;
 }
@@ -57,20 +57,39 @@
 .section-img.glow-hover:hover {
   box-shadow: 0 0 25px 5px #d28e01;
   transform: scale(1.08);
+  box-shadow: 0 0 25px 5px #d28e01;
+  transform: scale(1.08);
+}
+
+/* Vision & Mission Wrapper */
+.vision-mission-wrapper {
+  background-color: #fff;
+  padding: 3rem 0;
 }
 
 /* Vision Section */
 .vision-section {
-  background-color: #fff;
-  text-align: center;
+  border-right: 2px solid #d28e01;
+  padding-right: 2rem;
 }
+
 .vision-card {
   border-radius: 12px;
   background: #fff;
   border: 2px solid #d28e01;
   transition: transform 0.3s ease, background 0.3s ease;
   padding: 1.5rem;
+  width: 60%;
+  margin: 0.5rem auto;
+  padding: 1rem;
 }
+
+.vision-card h5 {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
 .vision-card:hover {
   transform: translateY(-6px);
   background: #d28e01;
@@ -81,45 +100,43 @@
 }
 .vision-icon {
   font-size: 2rem;
+  font-weight: 700;
   color: #d28e01;
   margin-bottom: 8px;
 }
 
 /* Mission Section */
 .mission-section {
-  background-color: #fff;
-  padding: 3rem 0;
-}
-.mission-section .section-text {
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  padding-left: 2rem;
 }
 
-.team-section {
-  background-color: #fff;
-  font-family: 'Poppins', sans-serif;
+.mission-card {
+  border-radius: 12px;
+  background: #fff;
+  border: 2px solid #d28e01;
+  transition: transform 0.3s ease, background 0.3s ease;
+  width: 60%;
+  margin: 0.5rem auto;
+  padding: 1rem;
 }
 
-.team-section .section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.2rem;
+.mission-card:hover {
+  transform: translateY(-6px);
+  background: #d28e01;
+  color: #fff;
+}
+
+.mission-card h5 {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.mission-number {
+  font-size: 2rem;
+  font-weight: 700;
   color: #d28e01;
-  margin-bottom: 2rem;
-}
-
-.team-card {
-  text-align: center;
-  padding: 1rem 0;
-}
-
-.team-img-wrapper {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1rem;
-  overflow: hidden;
-  border-radius: 50%;
+  margin-bottom: 8px;
 }
 
 .team-img {
@@ -155,5 +172,24 @@
   }
   .section-title {
     font-size: 1.9rem;
+  }
+
+.mission-card:hover .mission-number {
+  color: #fff;
+}
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .vision-section {
+    border-right: none;
+    border-bottom: 2px solid #d28e01;
+    padding-right: 0;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+  .mission-section {
+    padding-left: 0;
   }
 }
