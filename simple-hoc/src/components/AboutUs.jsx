@@ -12,11 +12,11 @@ import { FiGlobe, FiPenTool, FiUsers } from "react-icons/fi";
 
 const teamMembers = [
   { name: "Mpho Ngoepe", role: "CEO / Founder", img: "/images/about/boss11.png" },
-  { name: "Murangi Nemaungani", role: "Business Administrator", img: "/images/about/hope 22.png" },
+  { name: "Murangi Nemaungani", role: "Business Administrator", img: "/images/about/Hope.png" },
   { name: "Mpho Itumeleng", role: "Software Developer", img: "/images/about/Mpho.png" },
-  { name: "Sharleen Shabangu", role: "Software Developer", img: "/images/about/sharleen22.png" },
+  { name: "Sharleen Shabangu", role: "Software Developer", img: "/images/about/sharleen.png" },
   { name: "Pelma Mahlobogoane", role: "Software Developer", img: "/images/about/Pelma.jpg" },
-  { name: "Isabella Monyeseala", role: "Software Developer", img: "/images/about/Isa1.png" },
+  { name: "Isabella Monyeseala", role: "Software Developer", img: "/images/about/Isa.png" },
 ];
 
 const AboutUs = () => {
