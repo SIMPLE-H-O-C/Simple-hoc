@@ -4,8 +4,6 @@ import "../styles/AboutUs.css";
 // import images
 import storyImg from "/images/about/aboutus3.jpg";
 import founderImg from "/images/about/boss1.png";
-import founderImg from "../assets/boss1.png";
-import storyImg from "../assets/our story3.jpg";
 
 // icons
 import { motion } from "framer-motion";
@@ -226,45 +224,8 @@ const AboutUs = () => {
           ))}
         </div>
       </div>
+      
     </motion.section>
-      {/* Our Founder */}
-      <motion.section
-        className="founder-section py-5"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <div className="container">
-          <div className="row align-items-center">
-            {/* Text left */}
-            <div className="col-md-6">
-              <h2 className="section-title">Our <span>Founder</span></h2>
-              <p className="section-text">
-                Mpho Ngoepe is the visionary founder and CEO of
-                Simple. H-O-C. As our Managing Director, she has cultivated a
-                space where artistry and technology seamlessly blend to shape
-                culture and inspire transformation.
-              </p>
-              <p className="section-text">
-                Driven by the belief that the future belongs to those who embrace
-                both creativity and digital innovation, Mpho founded the company
-                to be more than just an agency — she created a home for
-                visionaries, talents, and brands. Her leadership is defined by a
-                passion for merging imagination with innovation.
-              </p>
-            </div>
-            {/* Image right */}
-            <div className="col-md-6 text-center mt-4 mt-md-0">
-              <img 
-                src={founderImg} 
-                alt="Founder" 
-                className="section-img img-fluid glow-hover" 
-              />
-            </div>
-          </div>
-        </div>
-      </motion.section>
 
     </div>
 
