@@ -3,26 +3,49 @@ import "../styles/AboutUs.css";
 
 // import images
 import storyImg from "/images/about/aboutus3.jpg";
-import founderImg from "/images/about/boss1.png";
-
+import founderImg from "/images/about/MphoNgoepe.png";
 
 // icons
 import { motion } from "framer-motion";
 import { FiGlobe, FiPenTool, FiUsers } from "react-icons/fi";
 
 const teamMembers = [
-  { name: "Mpho Ngoepe", role: "CEO / Founder", img: "/images/about/boss11.png" },
-  { name: "Murangi Nemaungani", role: "Business Administrator", img: "/images/about/Hope.png" },
-  { name: "Mpho Itumeleng", role: "Software Developer", img: "/images/about/Mpho.png" },
-  { name: "Sharleen Shabangu", role: "Software Developer", img: "/images/about/sharleen.png" },
-  { name: "Pelma Mahlobogoane", role: "Software Developer", img: "/images/about/Pelma.jpg" },
-  { name: "Isabella Monyeseala", role: "Software Developer", img: "/images/about/Isa.png" },
+  {
+    name: "Mpho Ngoepe",
+    role: "CEO / Founder",
+    img: "/images/about/NgoepeMpho.png",
+  },
+  {
+    name: "Murangi Nemaungani",
+    role: "Business Administrator",
+    img: "/images/about/Hope.png",
+  },
+  {
+    name: "Mpho Itumeleng",
+    role: "Web Developer",
+    img: "/images/about/Mpho.png",
+  },
+  {
+    name: "Sharleen Shabangu",
+    role: "Software Developer",
+    img: "/images/about/sharleen.png",
+  },
+  {
+    name: "Pelma Mahlobogoane",
+    role: "Software Developer",
+    img: "/images/about/Pelma.jpg",
+  },
+  {
+    name: "Isabella Monyeseala",
+    role: "Web Developer",
+    img: "/images/about/Isabella.png",
+  },
 ];
 
 const AboutUs = () => {
   return (
     <div id="aboutus" className="aboutus-page">
-     {/* Our Story */}
+      {/* Our Story */}
       <motion.section
         className="story-section py-5"
         initial={{ opacity: 0, y: 50 }}
@@ -31,7 +54,9 @@ const AboutUs = () => {
         viewport={{ once: true }}
       >
         <div className="container text-center">
-          <h2 className="section-title">Our <span>Story</span></h2>
+          <h2 className="section-title">
+            Our <span>Story</span>
+          </h2>
 
           <div className="row align-items-center mt-4">
             {/* Text (left on desktop, top on mobile) */}
@@ -47,8 +72,8 @@ const AboutUs = () => {
                 <p className="section-text">
                   Simple. H-O-C is more than a creative agency — it’s a home. A
                   home for visionaries, talents, and brands who want to tell
-                  powerful stories, explore digital frontiers, and leave a lasting
-                  legacy.
+                  powerful stories, explore digital frontiers, and leave a
+                  lasting legacy.
                 </p>
               </div>
             </div>
@@ -154,52 +179,52 @@ const AboutUs = () => {
         </div>
       </motion.section>
 
-     {/* Our Founder */}
-<motion.section
-  className="founder-section py-5"
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
->
-  <div className="container">
-    {/* Title centered at the top */}
-    <div className="text-center mb-4">
-      <h2 className="section-title">
-        Our <span>Founder</span>
-      </h2>
-    </div>
+      {/* Our Founder */}
+      <motion.section
+        className="founder-section py-5"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="container">
+          {/* Title centered at the top */}
+          <div className="text-center mb-4">
+            <h2 className="section-title">
+              Our <span>Founder</span>
+            </h2>
+          </div>
 
-    {/* Content row */}
-    <div className="row align-items-center">
-      {/* Image LEFT */}
-      <div className="col-md-6 text-center mb-4 mb-md-0 order-1 order-md-1">
-        <img
-          src={founderImg}
-          alt="Founder"
-          className="section-img img-fluid glow-hover"
-        />
-      </div>
+          {/* Content row */}
+          <div className="row align-items-center">
+            {/* Image LEFT */}
+            <div className="col-md-6 text-center mb-4 mb-md-0 order-1 order-md-1">
+              <img
+                src={founderImg}
+                alt="Founder"
+                className="section-img img-fluid glow-hover"
+              />
+            </div>
 
-      {/* Text RIGHT */}
-      <div className="col-md-6 order-2 order-md-2">
-        <p className="section-text">
-          Mpho Ngoepe is the visionary founder and CEO of
-          Simple. H-O-C. As our Managing Director, she has cultivated a
-          space where artistry and technology seamlessly blend to shape
-          culture and inspire transformation.
-        </p>
-        <p className="section-text">
-          Driven by the belief that the future belongs to those who embrace
-          both creativity and digital innovation, Mpho founded the company
-          to be more than just an agency — she created a home for
-          visionaries, talents, and brands. Her leadership is defined by a
-          passion for merging imagination with innovation.
-        </p>
-      </div>
-    </div>
-  </div>
-</motion.section>
+            {/* Text RIGHT */}
+            <div className="col-md-6 order-2 order-md-2">
+              <p className="section-text">
+                Mpho Ngoepe is the visionary founder and CEO of Simple. H-O-C.
+                As our Managing Director, she has cultivated a space where
+                artistry and technology seamlessly blend to shape culture and
+                inspire transformation.
+              </p>
+              <p className="section-text">
+                Driven by the belief that the future belongs to those who
+                embrace both creativity and digital innovation, Mpho founded the
+                company to be more than just an agency — she created a home for
+                visionaries, talents, and brands. Her leadership is defined by a
+                passion for merging imagination with innovation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.section>
 
       {/* Meet Our Team */}
       <motion.section
