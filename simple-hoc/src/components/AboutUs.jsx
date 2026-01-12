@@ -65,12 +65,11 @@ const AboutUs = () => {
                 <p className="section-text">
                   We believe the future belongs to those who embrace both
                   creativity and technology. That’s why we are driven by
-                  opportunities in the digital and creative world, creating
-                  solutions that are innovative and as imaginative as they are
-                  impactful.
+                  opportunities in the digital and creative world. Creating
+                  solutions that are innovative and impactful.
                 </p>
                 <p className="section-text">
-                  Simple. H-O-C is more than a creative agency — it’s a home. A
+                  Simple. HOC is more than a creative agency — it’s a home. A
                   home for visionaries, talents, and brands who want to tell
                   powerful stories, explore digital frontiers, and leave a
                   lasting legacy.
@@ -107,7 +106,7 @@ const AboutUs = () => {
               </h2>
               <p className="section-text mb-4">
                 To be the leading creative house where artistry meets technology
-                innovation, shaping culture and inspiring transformation in the
+                innovation aiming to shape culture and inspiring transformation in the
                 digital era.
               </p>
               <div className="row g-3">
@@ -152,28 +151,7 @@ const AboutUs = () => {
                 delivering innovative, human-centered solutions that blend
                 artistry with technology to build a lasting legacy.
               </p>
-
-              <div className="row g-3">
-                {[
-                  { number: "120+", label: "Happy Clients" },
-                  { number: "250+", label: "Projects Completed" },
-                  { number: "10+", label: "Creative Partners" },
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="col-12"
-                    initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="mission-card p-4 h-100 text-center">
-                      <h3 className="mission-number">{item.number}</h3>
-                      <h5>{item.label}</h5>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+             
             </div>
           </div>
         </div>
