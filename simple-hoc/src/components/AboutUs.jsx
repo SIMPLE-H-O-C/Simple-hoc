@@ -8,6 +8,10 @@ import founderImg from "/images/about/MphoNgoepe.png";
 // icons
 import { motion } from "framer-motion";
 import { FiGlobe, FiPenTool, FiUsers } from "react-icons/fi";
+import { FiEye, FiTarget } from "react-icons/fi";
+import { FaHandsHelping } from "react-icons/fa";
+
+
 
 const teamMembers = [
   {
@@ -46,116 +50,105 @@ const AboutUs = () => {
   return (
     <div id="aboutus" className="aboutus-page">
       {/* Our Story */}
-      <motion.section
-        className="story-section py-5"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+<motion.section
+  className="story-section py-5"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <div className="container text-center">
+    <h2 className="section-title">
+      OUR <span>STORY</span>
+    </h2>
+
+    {/* Centered text under header */}
+    <div className="story-text-wrapper mt-4">
+      <p className="section-text">
+        We believe the future belongs to those who embrace both
+        creativity and technology. That’s why we are driven by
+        opportunities in the digital and creative world. Creating
+        solutions that are innovative and impactful.
+      </p>
+      <p className="section-text">
+        Simple-HOC is more than a creative agency it’s a home. A
+        home for visionaries, talents, and brands who want to tell
+        powerful stories, explore digital frontiers, and leave a
+        lasting legacy.
+      </p>
+    </div>
+  </div>
+</motion.section>
+
+      {/* Vision, Mission & Values */}
+<motion.section
+  className="vision-mission-wrapper py-5"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <div className="container">
+    <div className="row g-4 text-center">
+
+      {/* Vision */}
+      <motion.div
+        className="col-lg-4 col-md-6"
+        whileHover={{ y: -8 }}
+        transition={{ duration: 0.3 }}
       >
-        <div className="container text-center">
+        <div className="vmv-block">
+          <FiEye className="vmv-icon" />
           <h2 className="section-title">
-            Our <span>Story</span>
+            OUR <span>VISION</span>
           </h2>
-
-          <div className="row align-items-center mt-4">
-            {/* Text (left on desktop, top on mobile) */}
-            <div className="col-md-6 d-flex justify-content-center">
-              <div className="story-text-wrapper text-center">
-                <p className="section-text">
-                  We believe the future belongs to those who embrace both
-                  creativity and technology. That’s why we are driven by
-                  opportunities in the digital and creative world. Creating
-                  solutions that are innovative and impactful.
-                </p>
-                <p className="section-text">
-                  Simple. HOC is more than a creative agency — it’s a home. A
-                  home for visionaries, talents, and brands who want to tell
-                  powerful stories, explore digital frontiers, and leave a
-                  lasting legacy.
-                </p>
-              </div>
-            </div>
-
-            {/* Image (right on desktop, below text on mobile) */}
-            <div className="col-md-6 d-flex justify-content-center">
-              <img
-                src={storyImg}
-                alt="Our Story"
-                className="section-img img-fluid glow-hover mx-auto"
-              />
-            </div>
-          </div>
+          <p className="section-text">
+            To be the leading agency where artistry meets technological innovations aiming to
+            shape culture and inspire transformation in the digital era.
+          </p>
         </div>
-      </motion.section>
+      </motion.div>
 
-      {/* Our Vision & Mission */}
-      <motion.section
-        className="vision-mission-wrapper py-5"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
+      {/* Mission */}
+      <motion.div
+        className="col-lg-4 col-md-6"
+        whileHover={{ y: -8 }}
+        transition={{ duration: 0.3 }}
       >
-        <div className="container">
-          <div className="row">
-            {/* Vision Section */}
-            <div className="col-lg-6 col-md-12 vision-section">
-              <h2 className="section-title">
-                Our <span>Vision</span>
-              </h2>
-              <p className="section-text mb-4">
-                To be the leading creative house where artistry meets technology
-                innovation aiming to shape culture and inspiring transformation in the
-                digital era.
-              </p>
-              <div className="row g-3">
-                {[
-                  {
-                    icon: <FiPenTool className="vision-icon" />,
-                    text: "To simplify creativity.",
-                  },
-                  {
-                    icon: <FiGlobe className="vision-icon" />,
-                    text: "To unlock opportunities in both the creative and digital world.",
-                  },
-                  {
-                    icon: <FiUsers className="vision-icon" />,
-                    text: "To make innovation accessible, inspiring, and human.",
-                  },
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="col-12"
-                    initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="vision-card p-4 h-100 text-center">
-                      {item.icon}
-                      <h5>{item.text}</h5>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Mission Section */}
-            <div className="col-lg-6 col-md-12 mission-section">
-              <h2 className="section-title">
-                Our <span>Mission</span>
-              </h2>
-              <p className="section-text mb-4">
-                To empower visionaries and brands by simplifying creativity and
-                delivering innovative, human-centered solutions that blend
-                artistry with technology to build a lasting legacy.
-              </p>
-             
-            </div>
-          </div>
+        <div className="vmv-block">
+          <FiTarget className="vmv-icon" />
+          <h2 className="section-title">
+            OUR <span>MISSION</span>
+          </h2>
+          <p className="section-text">
+            To empower visionaries and brands by simplifying creativity and
+            delivering innovative, human-centered solutions that blend artistry
+            with technology.
+          </p>
         </div>
-      </motion.section>
+      </motion.div>
+
+      {/* Values */}
+      <motion.div
+        className="col-lg-4 col-md-12"
+        whileHover={{ y: -8 }}
+        transition={{ duration: 0.3 }}
+      >
+        <div className="vmv-block">
+          <FaHandsHelping className="vmv-icon" />
+          <h2 className="section-title">
+            OUR <span>VALUES</span>
+          </h2>
+          <p className="section-text">
+            Creativity with purpose, integrity in every action, collaboration
+            over competition, and people-first innovation in everything we do.
+          </p>
+        </div>
+      </motion.div>
+
+    </div>
+  </div>
+</motion.section>
 
       {/* Our Founder */}
       <motion.section
