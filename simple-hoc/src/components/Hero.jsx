@@ -26,9 +26,11 @@ const Hero = () => {
 
        
         <div className="hero-right">
-          <h1 className="hero-title">
-            SI<span className="highlight-mp">MP</span>LE.
-          </h1>
+         <h1 className="hero-title">
+  SI<span className="highlight-mp">MP</span>LE
+  <span className="square-mark"></span>
+</h1>
+
           <h3 className="hero-subtitle">House Of Creatives</h3>
 
         
