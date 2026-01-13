@@ -24,6 +24,10 @@
   margin-top: -5px;
 }
 
+.navbar-brand {
+  margin-left: -100px; 
+}
+
 .navbar-brand:hover {
   color: #d28e01;
 }
@@ -45,26 +49,11 @@
   color: #d28e01 !important;
 }
 
-.nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -4px;
-  background: #d28e01;
-  transition: width 0.3s ease-in-out;
-}
 
 .nav-link:hover::after {
   width: 100%;
 }
 
-.nav-link.active-link {
-  color: #d28e01 !important;
-  font-weight: 700;
-  border-bottom: 2px solid #d28e01;
-}
 
 .active-link::after {
   width: 100%;
