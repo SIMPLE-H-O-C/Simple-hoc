@@ -39,11 +39,12 @@
   text-align: center;
 }
 
-.story-text-wrapper,
-.founder-text-wrapper {
-  max-width: 560px;
+.story-text-wrapper {
+  max-width: 650px;
   margin: 0 auto;
+  text-align: center;
 }
+
 
 /* Images with gold glow on hover */
 .section-img {
@@ -148,6 +149,41 @@
 .mission-card:hover .mission-number {
   color: #fff;
 }
+
+/* Vision, Mission, Values layout */
+.vmv-block {
+  padding: 2.5rem 1.5rem;
+  border-radius: 14px;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.vmv-block:hover {
+  background-color: #d28e01;
+  color: #fff;
+}
+
+.vmv-block:hover .section-title,
+.vmv-block:hover .section-text,
+.vmv-block:hover .vmv-icon {
+  color: #fff;
+}
+
+/* Icons */
+.vmv-icon {
+  font-size: 2.8rem;
+  color: #d28e01;
+  margin-bottom: 1rem;
+  transition: color 0.35s ease;
+}
+
+/* Remove divider lines completely */
+.vision-section,
+.mission-section {
+  border: none !important;
+  padding: 0 !important;
+}
+
 
 /* Team Section */
 .team-section {
