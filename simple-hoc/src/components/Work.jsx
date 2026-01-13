@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../styles/work.css";
+import "../styles/Work.css";
 
 export default function Work() {
   return (

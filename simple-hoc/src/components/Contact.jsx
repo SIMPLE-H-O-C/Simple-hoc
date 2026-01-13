@@ -24,9 +24,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact-section">
+    <div className="contact-section" id="contact">
       {/* LEFT SIDE */}
       <div className="contact-left">
+        <h2 className="fw-bold mb-5">GET IN TOUCH</h2>
         <p>
           Reach out to us using the contact details below or fill out the form,
           and we'll get back to you!
