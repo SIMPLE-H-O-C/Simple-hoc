@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPhoneAlt,
+} from "react-icons/fa";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { SiX } from "react-icons/si";
 import "../styles/contact.css";
@@ -16,11 +21,26 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for contacting Simple H-O-C! We will get back to you soon.");
-    setFormData({ name: "", email: "", contact: "", message: "" });
+
+    try {
+      const res = await fetch("https://api.simple-hoc.co.za/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Failed to send message");
+
+      alert(
+        "Thank you for contacting Simple H-O-C! We will get back to you soon."
+      );
+      setFormData({ name: "", email: "", contact: "", message: "" });
+    } catch (error) {
+      alert("Something went wrong. Please try again later.");
+      console.error(error);
+    }
   };
 
   return (
@@ -35,27 +55,39 @@ export default function Contact() {
 
         <div className="contact-info">
           <div>
-            <FaPhoneAlt /> 012 345 6789
+            <FaPhoneAlt /> 082 405 5875
           </div>
           <div>
-            <MdEmail /> info@simple-hoc.com
+            <MdEmail /> info@simple-hoc.co.za
           </div>
           <div>
-            <MdLocationOn /> Simple H.O.C, Johannesburg, 2194
+            <MdLocationOn /> 41 Juta Street, Johannesburg, 2001
           </div>
         </div>
 
         <div className="social-icons">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaFacebookF />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaInstagram />
           </a>
           <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
             <SiX />
           </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedinIn />
           </a>
         </div>
