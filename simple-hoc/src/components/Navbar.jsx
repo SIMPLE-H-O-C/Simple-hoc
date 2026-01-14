@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { useEffect, useState, useRef } from "react";
 import "../styles/Navbar.css";
-import logo from "../assets/log.png";
+import logo from "../assets/log1.png";
 import Collapse from "bootstrap/js/dist/collapse";
 
 
