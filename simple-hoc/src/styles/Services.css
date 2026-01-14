@@ -1,51 +1,121 @@
 .services-section {
   padding: 80px 20px;
-  background: #fff; /* white background */
+  background: #fff;
   text-align: center;
 }
 
-.section-title {
+
+.services-section .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 50px;
-  color: #d28e01; /* black heading */
+  margin-bottom: 32px;
+  color: #d28e01;
 }
+
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-  gap: 40px;
-  max-width: 1100px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
+
 .service-card {
-  background: transparent;
+  background: #fff;
   border: 1px solid #eee;
   padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
+
 .service-card:hover {
+  background-color: #d28e01;
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
+
 .service-card .icon {
-  color: #d28e01; /* brand color for icons */
-  margin-bottom: 20px;
+  color: #d28e01;
+  margin-bottom: 16px;
+  transition: color 0.3s ease;
 }
+
 
 .service-card h3 {
   font-size: 1.4rem;
   margin-bottom: 10px;
   color: #000;
+  transition: color 0.3s ease;
 }
 
 .service-card p {
   font-size: 1rem;
   color: #000;
   line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover .icon {
+  color: #fff;
+}
+
+
+
+@media (max-width: 991.98px) {
+  .services-section .section-title {
+    font-size: 2rem;
+    margin-bottom: 28px;
+  }
+
+  .services-grid {
+    gap: 28px;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .services-section {
+    padding: 60px 15px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .services-section .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+
+  .service-card {
+    padding: 22px 15px;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
 }

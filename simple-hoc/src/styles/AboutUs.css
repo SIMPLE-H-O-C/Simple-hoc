@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap");
 
 .aboutus-page {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #fff;
   color: #333;
 }
 
 /* Section Titles */
 .section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.2rem;    
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
   margin-bottom: 15px;
-  color: #d28e01;       
+  color: #d28e01;
 }
 
 /* Section Text */
@@ -25,40 +25,68 @@
   color: #d28e01;
 }
 
-/* Reduce overall section spacing */
+/* Consistent section spacing */
 .story-section,
 .vision-section,
 .mission-section,
 .founder-section {
-  padding: 3rem 0;   
+  padding: 3rem 0;
 }
+
+/* Center and constrain text columns */
+.story-section .col-md-6,
+.founder-section .col-md-6 {
+  text-align: center;
+}
+
+.story-text-wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 
 /* Images with gold glow on hover */
 .section-img {
   width: 75%;
-  max-width: 250px;
+  max-width: 300px;
   border-radius: 8px;
   transition: all 0.4s ease-in-out;
   display: inline-block;
 }
-
 .section-img.glow-hover:hover {
-  box-shadow: 0 0 25px 5px #d28e01; 
-  transform: scale(1.08);           
+  box-shadow: 0 0 25px 5px #d28e01;
+  transform: scale(1.08);
+}
+
+/* Vision & Mission Wrapper */
+.vision-mission-wrapper {
+  background-color: #fff;
+  padding: 3rem 0;
 }
 
 /* Vision Section */
 .vision-section {
-  background-color: #fff;
-  text-align: center;
+  border-right: 2px solid #d28e01;
+  padding-right: 2rem;
 }
+
 .vision-card {
   border-radius: 12px;
   background: #fff;
   border: 2px solid #d28e01;
   transition: transform 0.3s ease, background 0.3s ease;
-  padding: 1.5rem;  /* reduced padding */
+  padding: 1.5rem;
+  width: 60%;
+  margin: 0.5rem auto;
 }
+
+.vision-card h5 {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
 .vision-card:hover {
   transform: translateY(-6px);
   background: #d28e01;
@@ -67,17 +95,21 @@
 .vision-card:hover .vision-icon {
   color: #fff;
 }
+
 .vision-icon {
   font-size: 2rem;
+  font-weight: 700;
   color: #d28e01;
   margin-bottom: 8px;
 }
 
 /* Mission Section */
 .mission-section {
-  background-color: #f8f8f8;
+  background-color: #fff;
   padding: 3rem 0;
+  padding-left: 2rem;
 }
+
 .mission-section .section-text {
   max-width: 600px;
   margin: 0 auto;
@@ -85,19 +117,256 @@
   line-height: 1.7;
 }
 
-/* Vision + Mission */
-.vision-mission-wrapper {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
+.mission-card {
+  border-radius: 12px;
+  background: #fff;
+  border: 2px solid #d28e01;
+  transition: transform 0.3s ease, background 0.3s ease;
+  width: 60%;
+  margin: 0.5rem auto;
+  padding: 1rem;
 }
+
+.mission-card:hover {
+  transform: translateY(-6px);
+  background: #d28e01;
+  color: #fff;
+}
+
+.mission-card h5 {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.mission-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d28e01;
+  margin-bottom: 8px;
+}
+
+.mission-card:hover .mission-number {
+  color: #fff;
+}
+
+/* Vision, Mission, Values layout */
+.vmv-block {
+  padding: 2.5rem 1.5rem;
+  border-radius: 14px;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.vmv-block:hover {
+  background-color: #d28e01;
+  color: #fff;
+}
+
+.vmv-block:hover .section-title,
+.vmv-block:hover .section-text,
+.vmv-block:hover .vmv-icon {
+  color: #fff;
+}
+
+/* Icons */
+.vmv-icon {
+  font-size: 2.8rem;
+  color: #d28e01;
+  margin-bottom: 1rem;
+  transition: color 0.35s ease;
+}
+
+/* Remove divider lines completely */
 .vision-section,
 .mission-section {
-  flex: 1;
-  padding: 2rem;   
+  border: none !important;
+  padding: 0 !important;
 }
+
+
+/* =========================
+   TEAM SECTION
+========================= */
+
+.team-section {
+  background-color: #fff;
+  padding: 4.5rem 0;
+}
+
+.team-section .section-title {
+  margin-bottom: 2.2rem;
+}
+
+/* =========================
+   FEATURED FOUNDER CARD
+========================= */
+
+.team-featured-card {
+  background: #fff;
+  border: 2px solid #d28e01;
+  border-radius: 18px;
+  padding: 1.8rem 1.4rem;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(210, 142, 1, 0.22);
+  box-shadow: 0 0 25px 5px #d28e01;
+  transform: scale(1.08);
+}
+
+.team-featured-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.team-featured-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #555;
+  margin: 0.7rem 0 1rem;
+}
+
+/* =========================
+   TEAM GRID CARDS
+========================= */
+
+.team-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.1rem 0.6rem;
+  text-align: center;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   TEAM IMAGES (SQUARE)
+========================= */
+
+.team-img-wrapper {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 0.8rem;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.team-img:hover {
+  transform: scale(1.04);
+}
+
+/* =========================
+   TEAM TEXT
+========================= */
+
+.team-name {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+  color: #333;
+}
+
+.team-role {
+  font-size: 0.88rem;
+  color: #777;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.team-socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 0.6rem;
+}
+
+.team-socials a {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(210, 142, 1, 0.12);
+  color: #d28e01;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  transition: all 0.25s ease;
+}
+
+.team-socials a:hover {
+  background: #d28e01;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE TWEAKS
+========================= */
+
+@media (max-width: 991px) {
+  .team-featured-card {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-featured-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .team-img-wrapper {
+    width: 86px;
+    height: 86px;
+  }
+}
+
+
+/* Responsive Adjustments */
 @media (max-width: 992px) {
-  .vision-mission-wrapper {
-    flex-direction: column;
+  .vision-section {
+    border-right: none;
+    border-bottom: 2px solid #d28e01;
+    padding-right: 0;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+  .mission-section {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-img {
+    width: 90%;
+    max-width: 420px;
+    margin-top: 0.75rem;
+  }
+  .section-title {
+    font-size: 1.9rem;
   }
 }

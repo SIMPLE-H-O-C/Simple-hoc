@@ -1,77 +1,108 @@
 .custom-navbar {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); 
-  transition: background 0.3s ease-in-out;
-}
-
-.custom-navbar {
   position: sticky;
-  top: -80px; 
-  transition: top 0.4s ease-in-out;
+  top: 0;
+  z-index: 1000;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-  z-index: 1000;
+  padding: 0.5rem 1rem;
+  transition: top 0.4s ease-in-out;;
 }
 
+.hide-navbar {
+  top: -100px;
+}
 
+.navbar {
+  min-height: 50px;
+}
+
+.navbar-logo {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  transition: width 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+  margin-top: -5px;
+}
+
+.navbar-brand {
+  margin-left: -100px;
+  display: flex;
+  align-items: center;
+}
 
 .navbar-brand:hover {
   color: #d28e01;
 }
 
-
 .brand-highlight {
   color: #d28e01;
 }
-
 
 .nav-link {
   position: relative;
   margin: 0 8px;
   font-weight: 500;
-  color: #000; 
+  color: #000 !important;
+  padding: 0.5rem 1rem;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #d28e01; 
+  color: #d28e01 !important;
 }
 
-
-.nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: -4px;
-  background: #d28e01;
-  transition: width 0.3s ease-in-out;
-}
 
 .nav-link:hover::after {
   width: 100%;
 }
 
 
-.active-link {
-  color: #d28e01 !important;
-  font-weight: bold;
-}
-
 .active-link::after {
   width: 100%;
 }
 
+@media (max-width: 991.98px) {
+  .navbar-logo {
+    width: 120px;
+  }
 
-.navbar-logo {
-  height: 60px; 
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  margin-top: -5px; 
+  .navbar-collapse {
+    background-color: #fff;
+    padding: 1rem 0;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
 }
 
+@media (max-width: 575.98px) {
+  .navbar-logo {
+    width: 90px;
+    margin-top: 0;
+  }
 
-.navbar {
-  min-height: 56px;
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+  }
+
+  .custom-navbar {
+    padding: 0.25rem 0.75rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    margin-left: 0;
+  }
 }

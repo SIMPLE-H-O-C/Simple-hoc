@@ -20,16 +20,6 @@ const services = [
     desc: "We offer future-ready digital opportunities and solutions including app development, digital campaigns and custom software to simplify creativity and connect people globally. "
   },
   {
-    icon: <Users size={40} />,
-    title: "Influencer Marketing",
-    desc: "We connect brands with curated influencers who drive real results and lasting engagement."
-  },
-  {
-    icon: <Megaphone size={40} />,
-    title: "Public Relations",
-    desc: "We craft compelling stories and secure impactful media coverage to shape public perception."
-  },
-  {
     icon: <Calendar size={40} />,
     title: "Events Management",
     desc: "We plan and execute unforgettable events that bring brands and people together through creativity and culture."
@@ -39,7 +29,7 @@ const services = [
 const Services = () => {
   return (
     <section className="services-section" id="services">
-      <h2 className="section-title">What We Do</h2>
+      <h2 className="section-title">WHAT WE DO</h2>
       <div className="services-grid">
         {services.map((service, index) => (
           <motion.div
