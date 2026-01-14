@@ -1,12 +1,6 @@
 import { useState } from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaPhoneAlt,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaPhoneAlt, FaTiktok } from "react-icons/fa";
 import { MdEmail, MdLocationOn } from "react-icons/md";
-import { SiX } from "react-icons/si";
 import "../styles/contact.css";
 
 export default function Contact() {
@@ -15,6 +9,12 @@ export default function Contact() {
     email: "",
     contact: "",
     message: "",
+  });
+
+  const [popup, setPopup] = useState({
+    show: false,
+    message: "",
+    success: true,
   });
 
   const handleChange = (e) => {
@@ -33,13 +33,31 @@ export default function Contact() {
 
       if (!res.ok) throw new Error("Failed to send message");
 
-      alert(
-        "Thank you for contacting Simple H-O-C! We will get back to you soon."
-      );
+      setPopup({
+        show: true,
+        message:
+          "Thank you for contacting Simple H-O-C! We will get back to you soon.",
+        success: true,
+      });
+
       setFormData({ name: "", email: "", contact: "", message: "" });
+
+      // Auto close popup after 3 seconds
+      setTimeout(() => {
+        setPopup((prev) => ({ ...prev, show: false }));
+      }, 3000);
     } catch (error) {
-      alert("Something went wrong. Please try again later.");
+      setPopup({
+        show: true,
+        message: "Something went wrong. Please try again later.",
+        success: false,
+      });
       console.error(error);
+
+      // Auto close popup after 3 seconds
+      setTimeout(() => {
+        setPopup((prev) => ({ ...prev, show: false }));
+      }, 3000);
     }
   };
 
@@ -67,29 +85,37 @@ export default function Contact() {
 
         <div className="social-icons">
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/people/Simple-HOC/61586084716315/?rdid=6puRLZUN1javGo2J&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17tBrfHNwW%2F"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaFacebookF />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/simple_hoc/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaInstagram />
           </a>
-          <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
             <SiX />
+          </a> */}
+          <a
+            href="https://www.tiktok.com/@simple_hoc?_r=1&_t=ZS-930Y2BKzirK"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTiktok />
           </a>
+          {/* 
           <a
             href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaLinkedinIn />
-          </a>
+          </a> */}
         </div>
       </div>
 
@@ -139,6 +165,18 @@ export default function Contact() {
           <button type="submit">Submit</button>
         </form>
       </div>
+      {/* Popup modal */}
+      {popup.show && (
+        <div className="popup-overlay">
+          <div className={`popup ${popup.success ? "success" : "error"}`}>
+            <h3>{popup.success ? "Message Sent" : "Error"}</h3>
+            <p>{popup.message}</p>
+            <button onClick={() => setPopup({ ...popup, show: false })}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
