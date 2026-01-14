@@ -20,7 +20,7 @@ const teamMembers = [
     img: "/images/about/NgoepeMpho.png",
   },
   {
-    name: "Murangi Nemaungani",
+    name: "Hope Nemaungani",
     role: "Business Administrator",
     img: "/images/about/Hope.png",
   },
@@ -150,91 +150,94 @@ const AboutUs = () => {
   </div>
 </motion.section>
 
-      {/* Our Founder */}
-      <motion.section
-        className="founder-section py-5"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+{/* Our Team */}
+<motion.section
+  className="team-section py-5"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <div className="container">
+    <h2 className="section-title text-center mb-5">
+      MEET THE <span>TEAM</span>
+    </h2>
+
+    <div className="row align-items-start">
+      {/* Featured Founder */}
+      <motion.div
+        className="col-lg-4 col-md-12 mb-4"
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="container">
-          {/* Title centered at the top */}
-          <div className="text-center mb-4">
-            <h2 className="section-title">
-              Our <span>Founder</span>
-            </h2>
-          </div>
+        <div className="team-featured-card">
+          <img
+            src={teamMembers[0].img}
+            alt={teamMembers[0].name}
+            className="team-featured-img"
+          />
 
-          {/* Content row */}
-          <div className="row align-items-center">
-            {/* Image LEFT */}
-            <div className="col-md-6 text-center mb-4 mb-md-0 order-1 order-md-1">
-              <img
-                src={founderImg}
-                alt="Founder"
-                className="section-img img-fluid glow-hover"
-              />
-            </div>
+          <h4 className="team-name">{teamMembers[0].name}</h4>
+          <p className="team-role">{teamMembers[0].role}</p>
 
-            {/* Text RIGHT */}
-            <div className="col-md-6 order-2 order-md-2">
-              <p className="section-text">
-                Mpho Ngoepe is the visionary founder and CEO of Simple. H-O-C.
-                As our Managing Director, she has cultivated a space where
-                artistry and technology seamlessly blend to shape culture and
-                inspire transformation.
-              </p>
-              <p className="section-text">
-                Driven by the belief that the future belongs to those who
-                embrace both creativity and digital innovation, Mpho founded the
-                company to be more than just an agency — she created a home for
-                visionaries, talents, and brands. Her leadership is defined by a
-                passion for merging imagination with innovation.
-              </p>
-            </div>
+          <p className="team-featured-text">
+            Founder and creative visionary driving Simple-HOC’s mission of
+            blending artistry with technology to create meaningful digital
+            experiences.
+          </p>
+
+          {/* Socials */}
+          <div className="team-socials">
+            <a href={teamMembers[0].linkedin} target="_blank" rel="noreferrer">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href={teamMembers[0].twitter} target="_blank" rel="noreferrer">
+              <i className="fab fa-x-twitter"></i>
+            </a>
+            <a href={`mailto:${teamMembers[0].email}`}>
+              <i className="fas fa-envelope"></i>
+            </a>
           </div>
         </div>
-      </motion.section>
+      </motion.div>
 
-      {/* Meet Our Team */}
-      <motion.section
-        className="team-section py-5"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <div className="container text-center">
-          <h2 className="section-title">
-            Meet the <span>Team</span>
-          </h2>
-          <div className="row g-4 justify-content-center mt-4">
-            {teamMembers.map((member, idx) => (
-              <motion.div
-                key={idx}
-                className="col-6 col-md-4 col-lg-3"
-                initial={{ opacity: 0, scale: 0.8, y: 50 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="team-card text-center">
-                  <div className="team-img-wrapper">
-                    <img
-                      src={member.img}
-                      alt={member.name}
-                      className="team-img"
-                    />
-                  </div>
-                  <h5 className="team-name">{member.name}</h5>
-                  <p className="team-role">{member.role}</p>
+      {/* Team Grid (INCLUDING founder → total 6) */}
+      <div className="col-lg-8 col-md-12">
+        <div className="row g-4 justify-content-center">
+          {teamMembers.map((member, idx) => (
+            <motion.div
+              key={idx}
+              className="col-6 col-md-4"
+              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              viewport={{ once: true }}
+            >
+              <div className="team-card">
+                <div className="team-img-wrapper">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="team-img"
+                  />
                 </div>
-              </motion.div>
-            ))}
-          </div>
+
+                <h5 className="team-name">{member.name}</h5>
+                <p className="team-role">{member.role}</p>
+
+               
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </motion.section>
+      </div>
+    </div>
+  </div>
+</motion.section>
+
+
     </div>
   );
 };
