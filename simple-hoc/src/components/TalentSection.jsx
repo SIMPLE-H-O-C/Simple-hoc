@@ -8,55 +8,31 @@ const TalentSection = () => {
     {
       role: "Photographer • Videographer • Director",
       name: "Tebogo Mametja",
-      email: "bookings@tribeshed.co.za",
+      email: "bookings@simple-hoc.co.za",
       img: "/images/talent/talent1.1.jpeg",
       hoverImg: "/images/talent/talent1.2.jpeg",
       socials: {
         facebook: "https://www.facebook.com/Tebz06?mibextid=LQQJ4d",
         instagram: "https://www.instagram.com/tebomametja/",
         twitter: "https://x.com/tebomametja",
+        tiktok: "https://www.tiktok.com/@tebomametja",
       },
     },
-    // {
-    //   role: "Tech Lead",
-    //   name: "Don Francis",
-    //   email: "info@mysite.com",
-    //   phone: "123-456-7890",
-    //   img: "/images/talent/talent 2.1.png",
-    //   hoverImg: "/images/talent/talent 2.2.png",
-    // },
-    // {
-    //   role: "Designer",
-    //   name: "Taylor Smith",
-    //   email: "info@mysite.com",
-    //   phone: "123-456-7890",
-    //   img: "/images/talent/talent 3.1.png",
-    //   hoverImg: "/images/talent/talent 3.2.png",
-    // },
-    // {
-    //   role: "Photographer",
-    //   name: "Alex Johnson",
-    //   email: "info@mysite.com",
-    //   phone: "123-456-7890",
-    //   img: "/images/talent/talent 4.1.png",
-    //   hoverImg: "/images/talent/talent 4.2.png",
-    // },
-    // {
-    //   role: "Producer",
-    //   name: "Maria Lopez",
-    //   email: "info@mysite.com",
-    //   phone: "123-456-7890",
-    //   img: "/images/talent/talent 5.1.png",
-    //   hoverImg: "/images/talent/talent 5.2.png",
-    // },
-    // {
-    //   role: "Marketing Lead",
-    //   name: "James Carter",
-    //   email: "info@mysite.com",
-    //   phone: "123-456-7890",
-    //   img: "/images/talent/talent 6.1.png",
-    //   hoverImg: "/images/talent/talent 6.2.png",
-    // },
+    {
+      role: "Actor • Brand Ambassador • Host",
+      name: "Juicy Jay",
+      email: "bookings@simple-hoc.co.za",
+      img: "/images/talent/talent2.1.jpg",
+      hoverImg: "/images/talent/talent2.2.jpg",
+      socials: {
+        facebook:
+          "https://www.facebook.com/people/Juicy-Jay-Official/100089195547014/?mibextid=ZbWKwL",
+        instagram: "https://www.instagram.com/juicyjay_official/",
+        twitter: "https://x.com/juicyjay_siya?s=21&t=bCu18robNUh3Ywh3xg5g2w",
+        tiktok: "https://www.tiktok.com/@juicyjay_siya?_t=8attoqvkzs5&_r=1",
+        youtube: "https://www.youtube.com/@juicyjaysiya",
+      },
+    },
   ];
 
   return (
@@ -67,10 +43,10 @@ const TalentSection = () => {
           <h1 className="talent-title">TALENT</h1>
           <h5>Dedication. Expertise. Passion.</h5>
           <p className="talent-description">
-            At Simple. H.O.C, we don’t just manage talent — we nurture it. Our
+            At Simple. H-O-C, we don’t just manage talent — we nurture it. Our
             creatives are handpicked for their passion, performance, and
             potential. Whether you’re looking to book a headline act, capture
-            stunning visuals, or collaborate on a powerful campaign, our talent
+            stunning visuals, or collaborate on a creative campaign, our talent
             brings energy, excellence, and authenticity.
           </p>
         </div>
@@ -129,11 +105,31 @@ const TalentSection = () => {
                         {talent.socials.instagram && (
                           <a
                             href={talent.socials.instagram}
-                            className="social-link"
+                            className="me-3 social-link"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
                             <i className="fab fa-instagram"></i>
+                          </a>
+                        )}
+                        {talent.socials.tiktok && (
+                          <a
+                            href={talent.socials.tiktok}
+                            className="me-3 social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className="fab fa-tiktok"></i>
+                          </a>
+                        )}
+                        {talent.socials.youtube && (
+                          <a
+                            href={talent.socials.youtube}
+                            className="me-3 social-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className="fab fa-youtube"></i>
                           </a>
                         )}
                       </div>
