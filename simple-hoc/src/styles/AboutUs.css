@@ -215,6 +215,8 @@
 .team-featured-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 22px rgba(210, 142, 1, 0.22);
+  box-shadow: 0 0 25px 5px #d28e01;
+  transform: scale(1.08);
 }
 
 .team-featured-img {
