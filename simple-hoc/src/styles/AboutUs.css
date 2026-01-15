@@ -185,54 +185,166 @@
 }
 
 
-/* Team Section */
+/* =========================
+   TEAM SECTION
+========================= */
+
 .team-section {
   background-color: #fff;
-  font-family: "Poppins", sans-serif;
+  padding: 4.5rem 0;
 }
 
 .team-section .section-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.2rem;
-  color: #d28e01;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
 }
+
+/* =========================
+   FEATURED FOUNDER CARD
+========================= */
+
+.team-featured-card {
+  background: #fff;
+  border: 2px solid #d28e01;
+  border-radius: 18px;
+  padding: 1.8rem 1.4rem;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(210, 142, 1, 0.22);
+  box-shadow: 0 0 25px 5px #d28e01;
+  transform: scale(1.08);
+}
+
+.team-featured-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.team-featured-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #555;
+  margin: 0.7rem 0 1rem;
+}
+
+/* =========================
+   TEAM GRID CARDS
+========================= */
 
 .team-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.1rem 0.6rem;
   text-align: center;
-  padding: 1rem 0;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   TEAM IMAGES (SQUARE)
+========================= */
+
 .team-img-wrapper {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1rem;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 0.8rem;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 12px;
 }
 
 .team-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.25s ease;
 }
 
 .team-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px 5px rgba(210, 142, 1, 0.6);
+  transform: scale(1.04);
 }
 
+/* =========================
+   TEAM TEXT
+========================= */
+
 .team-name {
-  font-size: 1.1rem;
+  font-size: 0.98rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.15rem;
+  color: #333;
 }
 
 .team-role {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: #777;
 }
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.team-socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 0.6rem;
+}
+
+.team-socials a {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(210, 142, 1, 0.12);
+  color: #d28e01;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  transition: all 0.25s ease;
+}
+
+.team-socials a:hover {
+  background: #d28e01;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE TWEAKS
+========================= */
+
+@media (max-width: 991px) {
+  .team-featured-card {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-featured-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .team-img-wrapper {
+    width: 86px;
+    height: 86px;
+  }
+}
+
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {

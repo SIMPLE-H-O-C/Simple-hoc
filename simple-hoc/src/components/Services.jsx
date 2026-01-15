@@ -29,7 +29,7 @@ const services = [
 const Services = () => {
   return (
     <section className="services-section" id="services">
-      <h2 className="section-title">What We Do</h2>
+      <h2 className="section-title">WHAT WE DO</h2>
       <div className="services-grid">
         {services.map((service, index) => (
           <motion.div
