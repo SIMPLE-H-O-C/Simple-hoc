@@ -43,7 +43,7 @@ const TalentSection = () => {
           <h1 className="talent-title">TALENT</h1>
           <h5>Dedication. Expertise. Passion.</h5>
           <p className="talent-description">
-            At Simple. H-O-C, we don’t just manage talent — we nurture it. Our
+            At Simple-HOC, we don’t just manage talent — we nurture it. Our
             creatives are handpicked for their passion, performance, and
             potential. Whether you’re looking to book a headline act, capture
             stunning visuals, or collaborate on a creative campaign, our talent

@@ -2,37 +2,62 @@
   background-color: #fff;
   color: #333;
   text-align: center;
+  padding: 3rem 1rem;
 }
 
 .testimonials-section h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 4rem;
   color: #d28e01;
 }
 
-.testimonial-block {
-  max-width: 700px;
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 18px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(210, 142, 1, 0.25);
+
+  max-width: 680px;
+  min-height: 330px;
   margin: 0 auto;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* top | center | bottom */
+  align-items: center;
 }
 
-.quote-icon {
-  color: #c07a00;
-  opacity: 0.2;
+.testimonial-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.testimonial-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
 }
 
 .testimonial-text {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   line-height: 1.6;
-  color: #333;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.testimonial-footer {
+  margin-top: 5px;
 }
 
 .client-img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+  background-color: #fff;
 }
 
 .client-name {
@@ -49,13 +74,60 @@
 /* clients section */
 
 .clients-logos {
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 4rem; /* adds space between carousel and logos */
+  max-width: 1100px;
+  margin: 4rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  align-items: center;
 }
 
 .client-logo {
-  width: 120px;
-  height: auto;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  object-fit: contain;
+  margin: 0 auto;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.client-logo:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 12px #d28e01;
+}
+
+/* carousel section */
+
+.carousel {
+  overflow: hidden;
+}
+
+.testimonial-carousel {
+  overflow: visible !important;
+}
+
+.carousel-inner {
+  overflow: visible !important;
+}
+
+.carousel-item {
+  overflow: visible !important;
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev {
+  opacity: 0;
+  transform: none;
 }
