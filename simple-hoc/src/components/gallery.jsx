@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/gallery.css";
 
@@ -34,8 +34,8 @@ const works = [
   {
     type: "video",
     src: "/images/Work/Xiaomi Video - Made with Clipchamp.mp4",
-    title: "Xiaomi Ad Campaign",
-    client: "Xiaomi",
+    title: "Xiaomi Redmi Note 14 Series – TVC",
+    client: "Xiaomi South Africa",
     talent: "Tebogo Mametja",
   },
   {
@@ -48,7 +48,7 @@ const works = [
   {
     type: "video",
     src: "/images/Work/thebtsas_60970913.mp4",
-    title: "Behind the Scenes",
+    title: "Behind The Scenes Awards – 1st Annual Award Ceremony",
     client: "Xiaomi",
     talent: "Tebogo Mametja",
   },
@@ -71,6 +71,10 @@ const works = [
 const Gallery = () => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="work-scroll-page">
       <button className="back-btn" onClick={() => navigate(-1)}>
@@ -79,7 +83,6 @@ const Gallery = () => {
 
       {works.map((work, index) => (
         <section className="work-scroll-item" key={index}>
-          {/* LEFT INFO */}
           <div className="work-scroll-info">
             <h2>{work.title}</h2>
             <p>
@@ -90,17 +93,21 @@ const Gallery = () => {
             </p>
           </div>
 
-          {/* RIGHT MEDIA */}
           <div className="work-scroll-media">
-            {work.type === "video" ? (
-              <video src={work.src} controls playsInline preload="metadata" />
-            ) : (
-              <img src={work.src} alt={work.title} />
-            )}
+            <div className="media-frame">
+              {work.type === "video" ? (
+                <video
+                  src={work.src}
+                  controls
+                  muted
+                  playsInline
+                  preload="metadata"
+                />
+              ) : (
+                <img src={work.src} alt={work.title} />
+              )}
+            </div>
           </div>
-
-          {/* Divider line except after last item */}
-          {index < works.length - 1 && <div className="media-divider"></div>}
         </section>
       ))}
     </div>
