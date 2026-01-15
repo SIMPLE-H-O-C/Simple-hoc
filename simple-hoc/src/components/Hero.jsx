@@ -48,9 +48,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="scroll-indicator">
-        <span></span>
-      </div>
+    
     </section>
   );
 };
