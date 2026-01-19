@@ -155,11 +155,6 @@ const AboutUs = () => {
                   shape culture and inspire transformation in the digital era.
                 </p>
 
-                  <p className="section-text mt-2">
-                   At Simple-HOC, our vision is clear: to simplify creativity, unlock opportunities
-                    in both the creative and digital world, and make innovation accessible,
-                    inspiring, and human.
-                   </p>
               </div>
             </motion.div>
 
