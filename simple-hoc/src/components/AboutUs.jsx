@@ -18,13 +18,13 @@ const teamMembers = [
     role: "CEO / Founder",
     img: "/images/about/NgoepeMpho.png",
     description: "Founder and creative visionary driving Simple-HOC's mission of blending artistry with technology to create meaningful digital experiences.",
-    linkedin: "https://www.linkedin.com/in/murangi-nemaungani-56980a19b",
+    linkedin: "https://www.linkedin.com/in/mpho-ngoepe",
     twitter: "https://twitter.com/mphongoepe",
     email: "Mpho.Ngoepe@simpleHoc.co.za"
   },
   {
     name: "Hope Nemaungani",
-    role: "Business Strategist",
+    role: "Business Administrator",
     img: "/images/about/HopeM.png",
     description: "Skilled business administrator ensuring smooth operations and strategic planning to support Simple-HOC's growth and success.",
     linkedin: "https://www.linkedin.com/in/hope-nemaungani",
