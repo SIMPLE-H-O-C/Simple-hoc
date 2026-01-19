@@ -26,11 +26,18 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-        setScrollDirection("down");
+    
+      if (window.innerWidth > 991) {
+        if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+          setScrollDirection("down");
+        } else {
+          setScrollDirection("up");
+        }
       } else {
         setScrollDirection("up");
       }
+
+
 
       lastScrollY.current = currentScrollY;
 
@@ -63,11 +70,15 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
-    const navbarCollapse = document.getElementById("navbarNav");
-    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-    if (bsCollapse && navbarCollapse.classList.contains("show")) {
+    
+const navbarCollapse = document.getElementById("navbarNav");
+    if (navbarCollapse) {
+      const bsCollapse =
+        Collapse.getInstance(navbarCollapse) ||
+        new Collapse(navbarCollapse, { toggle: false });
       bsCollapse.hide();
     }
+  
   };
 
   return (
