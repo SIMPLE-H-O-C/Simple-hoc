@@ -14,7 +14,6 @@
   color: #d28e01;
   margin-bottom: 20px;
 }
-/* Video container */
 .work-video-wrapper {
   position: relative;
   width: 100%;
@@ -22,22 +21,16 @@
   overflow: hidden;
   border-radius: 20px;
 }
-
-/* Video itself */
 .work-video-wrapper video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-/* Button below video */
 .work-button-wrapper {
   margin-top: 40px;
   display: flex;
   justify-content: center;
 }
-
-/* Button styling */
 .work-button-wrapper .btn {
   padding: 14px 28px;
   background: white;
@@ -49,7 +42,6 @@
   font-size: 1.1rem;
   transition: all 0.3s ease;
 }
-
 .work-button-wrapper .btn:hover {
   background: #d28e01;
   color: white;
