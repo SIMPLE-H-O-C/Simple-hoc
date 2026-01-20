@@ -6,23 +6,41 @@ const testimonials = [
   {
     id: 1,
     image: "/images/testimonials/xiaomi.webp",
-    text: "A great testimonial can boost your brand’s image. Click to edit and add your own.",
+    text: "The team’s creativity, efficiency, and attention to detail were outstanding. Working with them was a seamless and highly professional experience.",
     name: "Xiaomi",
-    role: "Tech Lead",
+    role: "Head of Marketing",
   },
   {
     id: 2,
-    image: "/images/testimonials/supersport.webp",
-    text: "Working with this team has been a fantastic experience!",
-    name: "SuperSport",
-    role: "Marketing Director",
+    image: "/images/testimonials/monate_africa.webp",
+    text: "Mpho Ngoepe demonstrated exceptional professionalism, leadership, and attention to detail as Production Manager for the Naledi Film Festival. Her ability to manage logistics and deliver under pressure made her an invaluable part of the team.",
+    name: "Monate Africa",
+    role: "CEO & Founder",
   },
   {
     id: 3,
-    image: "/images/testimonials/bar-one.png",
-    text: "Their attention to detail and professionalism exceeded expectations.",
-    name: "Bar-One",
-    role: "Product Manager",
+    image: "/images/testimonials/behind_the_scenes.webp",
+    text: "The team carried our event from onboarding through to the final debrief with exceptional dedication. Their commitment and professionalism ensured a successful event from start to finish.",
+    name: "Behind The Scenes Awards",
+    role: "Executive Founder",
+  },
+];
+
+const clients = [
+  { id: 1, name: "Xiaomi", image: "/images/testimonials/xiaomi.webp" },
+  { id: 2, name: "SuperSport", image: "/images/testimonials/supersport.webp" },
+  { id: 3, name: "Bar-One", image: "/images/testimonials/bar-one.png" },
+  {
+    id: 4,
+    name: "Monate Africa",
+    image: "/images/testimonials/monate_africa.webp",
+  },
+  { id: 5, name: "Coca-Cola", image: "/images/testimonials/coca_cola.png" },
+  { id: 6, name: "Gillette", image: "/images/testimonials/gillette.png" },
+  {
+    id: 7,
+    name: "Behind the Scenes Awards",
+    image: "/images/testimonials/behind_the_scenes.webp",
   },
 ];
 
@@ -33,55 +51,44 @@ const Testimonials = () => {
         <h2 className="fw-bold mb-5">OUR CLIENTS SAY</h2>
 
         <Carousel
+          fade
+          interval={4500}
+          pause={false}
           indicators={false}
-          controls={true}
-          fade={true}
-          interval={3000}
-          className="testimonial-carousel"
+          controls
+          className="testimonial-carousel carousel-fade"
         >
           {testimonials.map((t) => (
             <Carousel.Item key={t.id}>
-              <blockquote className="testimonial-block text-center mx-auto">
-                {/* Decorative quote mark */}
-                <svg
-                  className="quote-icon mx-auto mb-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 13"
-                  width="50"
-                  height="40"
-                >
-                  <path
-                    d="M7.2 9.3c0 .8-.3 1.5-.8 2-.5.5-1.1.8-1.9.8-1 0-1.8-.3-2.4-1C1.6 10.4 1.3 9.5 1.3 8.3c0-1.2.3-2.4 1-3.5C3 3.6 4 2.7 5.2 2L6.1 3.4C5.4 3.9 4.9 4.4 4.6 5c-.3.6-.5 1.3-.6 2 .3-.1.6-.2 1-.2.7 0 1.3.2 1.7.6.5.5.7 1.1.7 1.9zM14.2 9.3c0 .8-.3 1.5-.8 2-.5.5-1.1.8-1.9.8-1 0-1.8-.3-2.4-1-.6-.6-.9-1.5-.9-2.7 0-1.2.3-2.4 1-3.5 1-1.1 2-2 3.2-2.7l.9 1.4c-.7.5-1.2 1-1.6 1.6-.4.6-.6 1.3-.7 2 .3-.1.6-.2 1-.2.7 0 1.3.2 1.7.6.5.5.7 1.1.7 1.9z"
-                    fill="currentColor"
-                  />
-                </svg>
+              <div className="testimonial-card text-center">
+                {/* Top: Logo */}
+                <div className="testimonial-header">
+                  <img src={t.image} alt={t.name} className="client-img" />
+                </div>
 
-                {/* Testimonial text */}
-                <p className="testimonial-text">
-                  <em>"{t.text}"</em>
-                </p>
+                {/* Middle: Text */}
+                <div className="testimonial-body">
+                  <p className="testimonial-text">
+                    <em>"{t.text}"</em>
+                  </p>
+                </div>
 
-                {/* Client Info */}
-                <footer className="mt-4">
-                  <img
-                    src={t.image}
-                    alt={t.name}
-                    className="client-img mb-3"
-                  />
+                {/* Bottom: Client info */}
+                <div className="testimonial-footer">
                   <div className="client-name">{t.name}</div>
                   <div className="client-role">{t.role}</div>
-                </footer>
-              </blockquote>            
+                </div>
+              </div>
             </Carousel.Item>
           ))}
         </Carousel>
         {/* Clients Logos */}
-        <div className="clients-logos d-flex flex-wrap justify-content-center align-items-center gap-4">
-          {testimonials.map((t) => (
+        <div className="clients-logos">
+          {clients.map((c) => (
             <img
-              key={t.id}
-              src={t.image}
-              alt={`${t.name} logo`}
+              key={c.id}
+              src={c.image}
+              alt={`${c.name} logo`}
               className="client-logo"
             />
           ))}
