@@ -28,7 +28,6 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-    
       if (window.innerWidth > 991) {
         if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
           setScrollDirection("down");
@@ -38,8 +37,6 @@ const Navbar = () => {
       } else {
         setScrollDirection("up");
       }
-
-
 
       lastScrollY.current = currentScrollY;
 
@@ -80,21 +77,12 @@ const Navbar = () => {
       }
     }
 
-<<<<<<< Updated upstream
-    
-const navbarCollapse = document.getElementById("navbarNav");
-    if (navbarCollapse) {
-      const bsCollapse =
-        Collapse.getInstance(navbarCollapse) ||
-        new Collapse(navbarCollapse, { toggle: false });
-=======
     const navbarCollapse = document.getElementById("navbarNav");
     const bsCollapse = Collapse.getInstance(navbarCollapse);
+
     if (bsCollapse && navbarCollapse.classList.contains("show")) {
->>>>>>> Stashed changes
       bsCollapse.hide();
     }
-  
   };
 
   return (
