@@ -24,10 +24,10 @@ const teamMembers = [
   },
   {
     name: "Hope Nemaungani",
-    role: "Business Administrator",
+    role: "Business Strategist",
     img: "/images/about/HopeM.png",
     description: "Skilled business administrator ensuring smooth operations and strategic planning to support Simple-HOC's growth and success.",
-    linkedin: "https://www.linkedin.com/in/hope-nemaungani",
+    linkedin: "https://www.linkedin.com/in/murangi-nemaungani-56980a19b",
     twitter: "https://twitter.com/hopenemaungani",
     email: "hope.nemaungani@simple-hoc.co.za"
   },
@@ -155,11 +155,6 @@ const AboutUs = () => {
                   shape culture and inspire transformation in the digital era.
                 </p>
 
-                  <p className="section-text mt-2">
-                   At Simple-HOC, our vision is clear: to simplify creativity, unlock opportunities
-                    in both the creative and digital world, and make innovation accessible,
-                    inspiring, and human.
-                   </p>
               </div>
             </motion.div>
 
