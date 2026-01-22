@@ -32,9 +32,10 @@
 }
 .work-info {
   background-color: #f0f0f0;
-  color: #333;
+  color: black;
   display: flex;
-  align-items: stretch; 
+  align-items: stretch;
+  text-align: left;
 }
 .work-info .card-body {
   display: flex;
@@ -44,7 +45,8 @@
 }
 .work-title {
   color: #d28e01;
-  margin-bottom: 0.75rem;
+  margin-bottom: 5rem;
+  text-align: left ;
 }
 @media (max-width: 767.98px) {
   .work-scroll-page {
