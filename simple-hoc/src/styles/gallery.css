@@ -30,6 +30,18 @@
   height: 100%;
   object-fit: cover;
 }
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .work-info {
   background-color: #f0f0f0;
   color: black;
