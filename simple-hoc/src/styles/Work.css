@@ -6,9 +6,9 @@
   flex-direction: column;
   justify-content: space-between;
   background: white;
+  text-align: center ;
 }
-.work-title {
-  text-align: center;
+.work-section-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #d28e01;
