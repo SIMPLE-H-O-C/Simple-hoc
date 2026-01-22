@@ -16,7 +16,7 @@ const works = [
   {
     type: "video",
     src: "/images/Work/JuicyJay-Gillette.mp4",
-    title: "Gillette Campaign",
+    title: "Gillette #Fusion5 Pro Campaign",
     client: "Gillette South Africa",
     talent: "Siyamthanda 'Juicy Jay' Jwacu",
   },
@@ -55,16 +55,16 @@ const works = [
   {
     type: "video",
     src: "/images/Work/thebtsas_60970913.mp4",
-    title: "Behind The Scenes Awards – 1st Annual Award Ceremony",
+    title: "BTS Awards - 1st Annual Award Ceremony",
     client: "Charlie Communications",
     talent: "Mpho Ngoepe",
   },
   {
     type: "video",
     src: "/images/Work/OOR.mp4",
-    title: "OOR Creative Video",
-    client: "OOR",
-    talent: "OOR Production",
+    title: "OOR Outdoor Experience",
+    client: "OOR Music",
+    stagemanager: "Mpho Ngoepe",
   },
 ];
 
@@ -104,13 +104,12 @@ const Gallery = () => {
                         <p>
                           <strong>Client:</strong> {work.client}
                         </p>
-                        <p>
-                          <strong>Talent:</strong> {work.talent}
-                        </p>
 
                         {[
+                          { label: "Talent", value: work.talent },
                           { label: "Producer", value: work.producer },
                           { label: "Production", value: work.production },
+                          { label: "Stage Manager", value: work.stagemanager },
                           {
                             label: "Production Manager",
                             value: work.productionmanager,
