@@ -4,7 +4,7 @@ import "../styles/Work.css";
 export default function Work() {
   return (
     <section id="work" className="work-section">
-      <h2 className="work-title">OUR WORK</h2>
+      <h2 className="work-section-title">OUR WORK</h2>
 
       <div className="work-video-wrapper">
         <video autoPlay muted loop playsInline>
