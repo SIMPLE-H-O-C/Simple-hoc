@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row, Carousel } from "react-bootstrap";
 import Navbar from "../components/Navbar";
 import "../styles/gallery.css";
 
@@ -16,7 +16,7 @@ const works = [
   {
     type: "video",
     src: "/images/Work/JuicyJay-Gillette.mp4",
-    title: "Gillette Campaign",
+    title: "Gillette #Fusion5 Pro Campaign",
     client: "Gillette South Africa",
     talent: "Siyamthanda 'Juicy Jay' Jwacu",
   },
@@ -55,16 +55,35 @@ const works = [
   {
     type: "video",
     src: "/images/Work/thebtsas_60970913.mp4",
-    title: "Behind The Scenes Awards – 1st Annual Award Ceremony",
+    title: "BTS Awards - 1st Annual Award Ceremony",
     client: "Charlie Communications",
     talent: "Mpho Ngoepe",
   },
   {
     type: "video",
     src: "/images/Work/OOR.mp4",
-    title: "OOR Creative Video",
-    client: "OOR",
-    talent: "OOR Production",
+    title: "OOR Outdoor Experience",
+    client: "OOR Music",
+    stagemanager: "Mpho Ngoepe",
+  },
+  {
+    type: "carousel",
+    images: [
+      "/images/Work/SupersportsHope.jpg",
+      "/images/Work/SupersportsHope1.jpg",
+      "/images/Work/SupersportsKriya.jpg",
+      "/images/Work/SupersportsKriya1.jpg",
+      "/images/Work/SupersportsNqobile.jpg",
+      "/images/Work/SupersportsNqobile1.jpg",
+      "/images/Work/SupersportsVanes.jpg",
+      "/images/Work/SupersportsVanes1.jpg",
+    ],
+    title: "SuperSports Disruptors Campaign",
+    client: "SuperSports",
+    talent: "Tebogo Mametja",
+    productionmanager: "Mpho Ngoepe",
+    agency: "Culture Collector",
+    production: "Yarona Motion Pictures",
   },
 ];
 
@@ -85,7 +104,7 @@ const Gallery = () => {
                 <Card className="border-0 work-card h-100">
                   <Row className="g-0 work-card-row">
                     <Col md={6} className="work-media-wrapper">
-                      {work.type === "video" ? (
+                      {work.type === "video" && (
                         <video
                           src={work.src}
                           controls
@@ -93,8 +112,20 @@ const Gallery = () => {
                           playsInline
                           preload="metadata"
                         />
-                      ) : (
+                      )}
+
+                      {work.type === "image" && (
                         <img src={work.src} alt={work.title} />
+                      )}
+
+                      {work.type === "carousel" && (
+                        <Carousel indicators controls interval={3000}>
+                          {work.images.map((img, idx) => (
+                            <Carousel.Item key={idx}>
+                              <img src={img} alt={`Slide ${idx + 1}`} />
+                            </Carousel.Item>
+                          ))}
+                        </Carousel>
                       )}
                     </Col>
 
@@ -104,13 +135,13 @@ const Gallery = () => {
                         <p>
                           <strong>Client:</strong> {work.client}
                         </p>
-                        <p>
-                          <strong>Talent:</strong> {work.talent}
-                        </p>
 
                         {[
+                          { label: "Talent", value: work.talent },
                           { label: "Producer", value: work.producer },
                           { label: "Production", value: work.production },
+                          { label: "Stage Manager", value: work.stagemanager },
+                          { label: "Agency", value: work.agency },
                           {
                             label: "Production Manager",
                             value: work.productionmanager,
