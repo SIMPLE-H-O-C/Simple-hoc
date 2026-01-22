@@ -1,11 +1,10 @@
-// src/components/Navbar.jsx
+import React, { useEffect, useState, useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { useEffect, useState, useRef } from "react";
 import "../styles/Navbar.css";
 import logo from "../assets/log1.png";
 import Collapse from "bootstrap/js/dist/collapse";
-
 
 const Navbar = () => {
   const navItems = [
@@ -18,6 +17,9 @@ const Navbar = () => {
     "Contact",
   ];
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [active, setActive] = useState("home");
   const [scrollDirection, setScrollDirection] = useState("up");
   const lastScrollY = useRef(0);
@@ -26,8 +28,12 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-        setScrollDirection("down");
+      if (window.innerWidth > 991) {
+        if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+          setScrollDirection("down");
+        } else {
+          setScrollDirection("up");
+        }
       } else {
         setScrollDirection("up");
       }
@@ -56,15 +62,24 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [navItems]);
 
-  const handleScrollClick = (e, id) => {
+  const handleNavClick = (e, id) => {
     e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    // If not on home page, go home first
+    if (location.pathname !== "/") {
+      navigate("/", {
+        state: { scrollTo: id },
+      });
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
 
     const navbarCollapse = document.getElementById("navbarNav");
-    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+    const bsCollapse = Collapse.getInstance(navbarCollapse);
+
     if (bsCollapse && navbarCollapse.classList.contains("show")) {
       bsCollapse.hide();
     }
@@ -80,7 +95,7 @@ const Navbar = () => {
         <a
           className="navbar-brand"
           href="#home"
-          onClick={(e) => handleScrollClick(e, "home")}
+          onClick={(e) => handleNavClick(e, "home")}
         >
           <img src={logo} alt="SIMPLE. H-O-C" className="navbar-logo" />
         </a>
@@ -107,11 +122,9 @@ const Navbar = () => {
               return (
                 <li className="nav-item" key={item}>
                   <a
-                    className={`nav-link ${
-                      active === id ? "active-link" : ""
-                    }`}
+                    className={`nav-link ${active === id ? "active-link" : ""}`}
                     href={`#${id}`}
-                    onClick={(e) => handleScrollClick(e, id)}
+                    onClick={(e) => handleNavClick(e, id)}
                   >
                     {item}
                   </a>
