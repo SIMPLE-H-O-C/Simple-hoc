@@ -30,14 +30,14 @@
   height: 100%;
   object-fit: cover;
 }
-.carousel,
-.carousel-inner,
-.carousel-item,
-.carousel-item img {
+.gallery-page .carousel,
+.gallery-page .carousel-inner,
+.gallery-page .carousel-item,
+.gallery-page .carousel-item img {
   height: 100%;
 }
 
-.carousel-item img {
+.gallery-page.carousel-item img {
   width: 100%;
   object-fit: fill;
 }
