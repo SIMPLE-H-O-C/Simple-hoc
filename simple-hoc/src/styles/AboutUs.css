@@ -10,6 +10,7 @@
 .section-title {
   font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 15px;
   color: #d28e01;
 }
@@ -156,6 +157,8 @@
   border-radius: 14px;
   transition: all 0.35s ease;
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .vmv-block:hover {
@@ -245,9 +248,12 @@
   padding: 1.1rem 0.6rem;
   text-align: center;
   height: 100%;
+  margin: 0.3rem;
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+
 
 .team-card:hover {
   transform: translateY(-4px);

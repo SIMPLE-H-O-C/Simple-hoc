@@ -24,10 +24,10 @@ const teamMembers = [
   },
   {
     name: "Hope Nemaungani",
-    role: "Business Administrator",
-    img: "/images/about/Hope.png",
+    role: "Business Strategist",
+    img: "/images/about/HopeM.png",
     description: "Skilled business administrator ensuring smooth operations and strategic planning to support Simple-HOC's growth and success.",
-    linkedin: "https://www.linkedin.com/in/hope-nemaungani",
+    linkedin: "https://www.linkedin.com/in/murangi-nemaungani-56980a19b",
     twitter: "https://twitter.com/hopenemaungani",
     email: "hope.nemaungani@simple-hoc.co.za"
   },
@@ -43,7 +43,7 @@ const teamMembers = [
   {
     name: "Sharleen Shabangu",
     role: "Software Developer",
-    img: "/images/about/sharleen.png",
+    img: "/images/about/Leen.png",
     description: "Innovative software developer building robust applications and solutions that power Simple-HOC's digital ecosystem.",
     linkedin: "https://www.linkedin.com/in/sharleen-shabangu-a6a1b220a",
     twitter: "https://twitter.com/sharleenshabangu",
@@ -154,6 +154,7 @@ const AboutUs = () => {
                   To be the leading agency where artistry meets technological innovations aiming to
                   shape culture and inspire transformation in the digital era.
                 </p>
+
               </div>
             </motion.div>
 
